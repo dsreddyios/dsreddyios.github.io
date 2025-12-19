@@ -1,151 +1,534 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Site Maintenance — We'll be right back</title>
-  <meta name="description" content="Our site is temporarily down for maintenance. We'll be back shortly." />
-  <style>
-    :root{
-      --bg:#fbfbfd;
-      --card:#ffffff;
-      --accent:#ff7a18;
-      --muted:#6b7280;
-      --shadow: 0 10px 30px rgba(15,23,42,0.06);
-      --max-width:820px;
-      --radius:14px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-      background:linear-gradient(180deg, var(--bg) 0%, #f8fafc 100%);
-      color:#0f172a;
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:32px;
-    }
 
-    .card{
-      width:100%;
-      max-width:var(--max-width);
-      background:var(--card);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      display:flex;
-      gap:28px;
-      padding:40px;
-      align-items:center;
-    }
+  <title>Logikwerk Private Limited | Enterprise AI & Data Analytics</title>
 
-    .logo {
-      width:96px;
-      height:96px;
-      flex:0 0 96px;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      border-radius:18px;
-      background:linear-gradient(135deg, rgba(255,122,24,0.12), rgba(59,130,246,0.06));
-    }
-    .logo svg{width:56px;height:56px;display:block}
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    .content{flex:1; min-width:0}
-    .title{
-      margin:0;
-      font-size:28px;
-      letter-spacing:-0.02em;
-    }
-    .subtitle{
-      margin:10px 0 18px 0;
-      color:var(--muted);
-      font-size:15px;
-      line-height:1.5;
-    }
+<meta name="description"
+      content="Logikwerk Private Limited delivers enterprise AI, data analytics, and cloud engineering solutions for modern businesses.">
 
-    .actions{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      align-items:center;
-    }
+<meta name="keywords"
+      content="Enterprise AI, Data Analytics, Cloud Engineering, Logikwerk, AI Solutions India">
 
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      gap:10px;
-      padding:10px 16px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:600;
-      cursor:pointer;
-      border:0;
-    }
+<meta name="robots" content="index, follow">
 
-    .btn-primary{
-      background:linear-gradient(90deg,var(--accent),#ffb86b);
-      color:white;
-      box-shadow: 0 6px 18px rgba(255,122,24,0.18);
-    }
+<link rel="canonical" href="https://www.logikwerk.in">
 
-    .btn-ghost{
-      background:transparent;
-      color:var(--muted);
-      border:1px solid #eef2ff;
-      box-shadow:none;
-    }
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    .meta{
-      margin-top:12px;
-      color:#94a3b8;
-      font-size:13px;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Logikwerk Private Limited | Enterprise AI & Data Solutions</title>
 
-    .spinner{
-      width:30px;height:30px;border-radius:50%;
-      border:3px solid rgba(15,23,42,0.08);
-      border-top-color:var(--accent);
-      animation:spin 1s linear infinite;
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E3A8A',   /* corporate blue */
+            secondary: '#0F172A' /* dark slate */
+          }
+        }
+      }
     }
-    @keyframes spin{to{transform:rotate(360deg)}}
-  </style>
+  </script>
 </head>
-<body>
-  <main class="card" role="main" aria-labelledby="main-heading">
-    <div style="position:relative">
-      <div class="logo" aria-hidden="true">
-        <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo">
-          <rect x="4" y="4" width="40" height="40" rx="8" fill="url(#g)"/>
-          <path d="M14 28L22 18l12 16" stroke="#fff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
-          <defs>
-            <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
-              <stop offset="0" stop-color="#ff7a18"/>
-              <stop offset="1" stop-color="#3b82f6"/>
-            </linearGradient>
-          </defs>
-        </svg>
+
+<body class="bg-white text-slate-800 scroll-smooth">
+
+<!-- ================= HEADER ================= -->
+<header id="site-header" class="fixed top-0 left-0 w-full bg-white z-50 transition-shadow">
+  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-3">
+      <svg width="36" height="36" viewBox="0 0 100 100">
+        <rect width="100" height="100" rx="18" fill="#1E40AF"/>
+        <text x="50" y="62" text-anchor="middle" font-size="56" fill="white" font-weight="700">L</text>
+      </svg>
+      <span class="text-lg font-semibold text-slate-900">Logikwerk</span>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex items-center space-x-10 text-sm font-medium">
+      <a href="#about" class="hover:text-blue-700">About</a>
+      <a href="#services" class="hover:text-blue-700">Services</a>
+      <a href="#industries" class="hover:text-blue-700">Industries</a>
+      <a href="#careers" class="hover:text-blue-700">Careers</a>
+      <a href="#contact" class="text-blue-700 font-semibold">Contact</a>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="menu-btn" class="md:hidden text-slate-900">
+      ☰
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+    <div class="px-6 py-4 space-y-4 text-sm font-medium">
+      <a href="#about" class="block">About</a>
+      <a href="#services" class="block">Services</a>
+      <a href="#industries" class="block">Industries</a>
+      <a href="#careers" class="block">Careers</a>
+      <a href="#contact" class="block text-blue-700">Contact</a>
+    </div>
+  </div>
+</header>
+
+
+
+    <!-- Nav -->
+    <nav class="hidden md:flex items-center space-x-10 text-sm font-medium">
+      <a href="#about" class="hover:text-blue-800">About</a>
+      <a href="#services" class="hover:text-blue-800">Services</a>
+      <a href="#industries" class="hover:text-blue-800">Industries</a>
+      <a href="#careers" class="hover:text-blue-800">Careers</a>
+      <a href="#contact"
+         class="border border-blue-800 text-blue-800 px-4 py-2 hover:bg-blue-800 hover:text-white transition">
+        Contact
+      </a>
+    </nav>
+
+  </div>
+</header>
+<!-- ================= HERO ================= -->
+<section class="pt-32 pb-24 bg-gradient-to-b from-blue-50 to-white">
+  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- Left Content -->
+    <div>
+      <div class="border-l-4 border-blue-700 pl-4 mb-6">
+        <h1 class="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
+          Enterprise AI &<br />Data Analytics Solutions
+        </h1>
+      </div>
+
+      <p class="text-slate-600 text-lg mb-8 max-w-xl">
+        Logikwerk Private Limited helps organizations design, build,
+        and scale intelligent systems using Artificial Intelligence
+        and advanced data analytics.
+      </p>
+
+      <div class="flex gap-4">
+        <a href="#contact"
+           class="bg-blue-700 text-white px-6 py-3 text-sm font-semibold rounded hover:bg-blue-800 transition">
+          Speak with Our Team
+        </a>
+        <a href="#services"
+           class="border border-blue-700 text-blue-700 px-6 py-3 text-sm font-semibold rounded hover:bg-blue-50 transition">
+          Our Services
+        </a>
       </div>
     </div>
 
-    <div class="content">
-      <h1 id="main-heading" class="title">We'll be back soon.</h1>
-      <p class="subtitle">Thanks for visiting — we're performing scheduled maintenance to improve the site. We expect to be back online shortly.</p>
+    <!-- Right Visual -->
+    <div class="hidden md:block">
+      <div class="bg-white rounded-xl shadow-lg p-8">
+        <ul class="space-y-4 text-sm text-slate-700">
+          <li>✔ Enterprise AI Platforms</li>
+          <li>✔ Data Engineering & Analytics</li>
+          <li>✔ Cloud-Native Architecture</li>
+          <li>✔ Security & Compliance</li>
+        </ul>
+      </div>
+    </div>
 
-      <div class="actions" role="group" aria-label="Maintenance actions">
-        <a class="btn btn-primary" href="mailto:contact@logikwerk.in?subject=Site%20down%20inquiry">Contact us</a>
+  </div>
+</section>
 
-        <button class="btn btn-ghost" onclick="location.reload();" title="Reload page">
-          <span class="spinner" aria-hidden="true"></span>
-          Reload
+<section id="industries" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold text-slate-900 mb-12">
+      Industries We Serve
+    </h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Card -->
+      <div class="border rounded-xl p-6 hover:shadow-lg transition">
+        <h3 class="font-semibold text-lg mb-2">Banking & Finance</h3>
+        <p class="text-sm text-slate-600">
+          AI-driven risk analytics, fraud detection, and automation.
+        </p>
+      </div>
+
+      <div class="border rounded-xl p-6 hover:shadow-lg transition">
+        <h3 class="font-semibold text-lg mb-2">Healthcare</h3>
+        <p class="text-sm text-slate-600">
+          Predictive analytics, patient insights, and compliance systems.
+        </p>
+      </div>
+
+      <div class="border rounded-xl p-6 hover:shadow-lg transition">
+        <h3 class="font-semibold text-lg mb-2">Retail & E-Commerce</h3>
+        <p class="text-sm text-slate-600">
+          Demand forecasting, personalization, and supply optimization.
+        </p>
+      </div>
+
+      <div class="border rounded-xl p-6 hover:shadow-lg transition">
+        <h3 class="font-semibold text-lg mb-2">Manufacturing</h3>
+        <p class="text-sm text-slate-600">
+          Predictive maintenance and operational intelligence.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= about ================= -->
+
+<section id="about" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h2 class="text-3xl font-semibold text-slate-900 mb-6 relative inline-block">
+      About Logikwerk
+      <span class="absolute left-0 -bottom-2 w-16 h-1 bg-blue-800"></span>
+    </h2>
+
+    <div class="bg-blue-50 border-l-4 border-blue-800 p-6 max-w-4xl">
+      <p class="text-slate-700 leading-relaxed">
+        Logikwerk Private Limited is a technology company specializing in
+        Artificial Intelligence and Data Analytics. We work closely with
+        business leaders to solve complex challenges through scalable,
+        secure, and future-ready digital solutions.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ================= SERVICES ================= -->
+<section id="services" class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h2 class="text-3xl font-semibold text-slate-900 mb-16 relative inline-block">
+      Our Capabilities
+      <span class="absolute left-0 -bottom-2 w-16 h-1 bg-blue-800"></span>
+    </h2>
+
+    <div class="grid md:grid-cols-3 gap-12">
+
+      <div class="border-t-4 border-blue-800 bg-white p-6">
+        <h3 class="text-xl font-medium mb-3">Artificial Intelligence</h3>
+        <p class="text-slate-600">
+          Machine learning, NLP, computer vision, and predictive intelligence.
+        </p>
+      </div>
+
+      <div class="border-t-4 border-blue-800 bg-white p-6">
+        <h3 class="text-xl font-medium mb-3">Data Analytics & Engineering</h3>
+        <p class="text-slate-600">
+          Enterprise data pipelines, dashboards, and analytics platforms.
+        </p>
+      </div>
+
+      <div class="border-t-4 border-blue-800 bg-white p-6">
+        <h3 class="text-xl font-medium mb-3">Custom AI Solutions</h3>
+        <p class="text-slate-600">
+          Tailored AI products aligned with business objectives.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= Industries ================= -->
+
+
+<section id="industries" class="py-24 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+
+    <h2 class="text-3xl font-semibold text-slate-900 mb-12 relative inline-block">
+      Industries We Serve
+      <span class="absolute left-0 -bottom-2 w-16 h-1 bg-blue-800"></span>
+    </h2>
+
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="bg-blue-50 border-l-4 border-blue-800 p-4">Healthcare</div>
+      <div class="bg-blue-50 border-l-4 border-blue-800 p-4">Banking & Finance</div>
+      <div class="bg-blue-50 border-l-4 border-blue-800 p-4">Retail & E-Commerce</div>
+      <div class="bg-blue-50 border-l-4 border-blue-800 p-4">Manufacturing</div>
+    </div>
+
+  </div>
+</section>
+
+<section id="services" class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold text-slate-900 mb-12">
+      Our Services
+    </h2>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+      <!-- Service -->
+      <div class="bg-white p-6 rounded-xl shadow-sm">
+        <div class="mb-4 text-blue-700">
+          🤖
+        </div>
+        <h3 class="font-semibold mb-2">Artificial Intelligence</h3>
+        <p class="text-sm text-slate-600">
+          Enterprise AI models, NLP, and automation solutions.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-sm">
+        <div class="mb-4 text-blue-700">📊</div>
+        <h3 class="font-semibold mb-2">Data Analytics</h3>
+        <p class="text-sm text-slate-600">
+          Business intelligence, dashboards, and insights.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-sm">
+        <div class="mb-4 text-blue-700">☁️</div>
+        <h3 class="font-semibold mb-2">Cloud Engineering</h3>
+        <p class="text-sm text-slate-600">
+          Secure, scalable cloud-native architectures.
+        </p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-sm">
+        <div class="mb-4 text-blue-700">🔒</div>
+        <h3 class="font-semibold mb-2">Security & Compliance</h3>
+        <p class="text-sm text-slate-600">
+          Governance, risk, and compliance automation.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ================= CAREERS ================= -->
+
+<section id="careers" class="py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold text-slate-900 mb-12">
+      Careers at Logikwerk
+    </h2>
+
+    <!-- Full-Time Roles -->
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- Associate Software Engineer -->
+      <div class="border rounded-xl p-8 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-4">
+          Associate Software Engineer
+        </h3>
+
+        <ul class="text-sm text-slate-600 space-y-2 mb-6">
+          <li><strong>Qualification:</strong> BE / BTech / BCA</li>
+          <li><strong>Pass Out Year:</strong> 2024 / 2025</li>
+          <li><strong>Location:</strong> Hyderabad</li>
+        </ul>
+
+        <a
+          href="mailto:careers@logikwerk.in?subject=Application - Associate Software Engineer"
+          class="text-blue-700 font-semibold hover:underline"
+        >
+          Apply via Email → careers@logikwerk.in
+        </a>
+      </div>
+
+      <!-- HR Executive -->
+      <div class="border rounded-xl p-8 hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-4">
+          HR Executive
+        </h3>
+
+        <ul class="text-sm text-slate-600 space-y-2 mb-6">
+          <li><strong>Qualification:</strong> Any Graduate / MBA (HR preferred)</li>
+          <li><strong>Experience:</strong> 0–2 Years</li>
+          <li><strong>Location:</strong> Hyderabad</li>
+        </ul>
+
+        <a
+          href="mailto:careers@logikwerk.in?subject=Application - HR Executive"
+          class="text-blue-700 font-semibold hover:underline"
+        >
+         Apply via Email → careers@logikwerk.in
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Internship Section -->
+    <div class="mt-20">
+
+      <h3 class="text-2xl font-semibold text-slate-900 mb-10">
+        Internship Opportunities
+      </h3>
+
+      <!-- SAME GRID AS ABOVE -->
+      <div class="grid md:grid-cols-2 gap-10">
+
+        <div class="border rounded-xl p-8 hover:shadow-lg transition">
+          <h4 class="text-xl font-semibold mb-4">
+            Software / AI Intern
+          </h4>
+
+          <ul class="text-sm text-slate-600 space-y-2 mb-6">
+            <li><strong>Eligibility:</strong> BE / BTech / BCA / MCA</li>
+            <li><strong>Pass Out:</strong> 2024 / 2025 / 2026</li>
+            <li><strong>Duration:</strong> 3 – 6 Months</li>
+            <li><strong>Location:</strong> Hyderabad (Onsite / Hybrid)</li>
+          </ul>
+
+          <a
+            href="mailto:careers@logikwerk.in?subject=Application - Internship"
+            class="text-blue-700 font-semibold hover:underline"
+          >
+            Apply for Internship → careers@logikwerk.in
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold text-slate-900 mb-8">
+      Job Location
+    </h2>
+
+    <p class="text-slate-600 mb-8 max-w-2xl">
+      All current roles are based out of our Hyderabad office.
+      Candidates should be open to onsite or hybrid work models.
+    </p>
+
+    <div class="rounded-2xl overflow-hidden shadow-sm border">
+      <iframe
+        src="https://www.google.com/maps?q=Acendia%20Ark%20Kondapur%20Hyderabad&output=embed"
+        width="100%"
+        height="420"
+        style="border:0;"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="py-24 bg-slate-50">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <h2 class="text-3xl font-bold text-slate-900 mb-12">
+      Contact Us
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-12 bg-white rounded-2xl shadow-sm p-10">
+
+      <!-- Left: Contact Form -->
+      <form
+        action="mailto:info@logikwerk.in"
+        method="POST"
+        enctype="text/plain"
+        class="space-y-6"
+      >
+        <div>
+          <label class="block text-sm font-medium mb-1">Name</label>
+          <input
+            type="text"
+            name="Name"
+            required
+            class="w-full border px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Email</label>
+          <input
+            type="email"
+            name="Email"
+            required
+            class="w-full border px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+          />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Message</label>
+          <textarea
+            name="Message"
+            rows="5"
+            required
+            class="w-full border px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+          ></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="bg-blue-700 text-white px-6 py-3 rounded font-semibold hover:bg-blue-800 transition"
+        >
+          Send Message
         </button>
+      </form>
+
+      <!-- Right: Company Info -->
+      <div class="space-y-6 text-slate-700">
+
+        <div>
+          <h3 class="font-semibold text-lg mb-1">Logikwerk Private Limited</h3>
+          <p class="text-sm">
+            Enterprise AI & Data Analytics Solutions
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-medium mb-1">Email</h4>
+          <p class="text-sm">info@logikwerk.in</p>
+        </div>
+
+        <div>
+          <h4 class="font-medium mb-1">Office Address</h4>
+          <p class="text-sm leading-relaxed">
+            SY NO.12, Acendia Ark,<br>
+            White Field Rd, Kondapur,<br>
+            K.V, Serilingampalle (M),<br>
+            Hyderabad, Telangana 500019
+          </p>
+        </div>
+
+        <div>
+          <h4 class="font-medium mb-1">Business Hours</h4>
+          <p class="text-sm">
+            Monday – Friday<br>
+            9:30 AM – 6:30 PM IST
+          </p>
+        </div>
+
       </div>
 
-      <p class="meta">Need urgent support? Email <a href="mailto: info@logikwerk.in">contact@logikwerk.in</a></p>
     </div>
-  </main>
-</body>
-</html>
+  </div>
+</section>
+
+
