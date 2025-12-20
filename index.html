@@ -40,18 +40,12 @@
     }
   </script>
 </head>
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const menuBtn = document.getElementById("menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
 
-    menuBtn.addEventListener("click", function () {
-      mobileMenu.classList.toggle("hidden");
-    });
-  });
-</script>
+<body class="bg-white text-slate-800 scroll-smooth pt-16">
 
-<body class="bg-white text-slate-800 scroll-smooth pt-16"></body>
+
+  
+
 <header
   id="site-header"
   class="fixed top-0 left-0 w-full bg-white z-50 border-b transition-shadow">
@@ -533,5 +527,15 @@
     </div>
   </div>
 </section>
+ <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
 
+    menuBtn.onclick = function () {
+      mobileMenu.classList.toggle("hidden");
+    };
+  </script>
+
+</body>
+</html>
 
