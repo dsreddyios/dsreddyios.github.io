@@ -431,46 +431,34 @@
 </section>
 
 
-
-<!-- ================= CONTACT ================= -->
 <section id="contact" class="py-24 bg-slate-50">
   <div class="max-w-7xl mx-auto px-6">
 
-    <h2 class="text-3xl font-bold text-slate-900 mb-12">
+    <h2 class="text-3xl font-bold text-slate-900 mb-8">
       Contact Us
     </h2>
 
-      
+    <!-- ✅ Success Message (OUTSIDE grid) -->
     <div
-  id="successMessage"
-  class="hidden mb-6 mx-auto max-w-lg rounded-lg bg-green-50 border border-green-300 p-4 text-green-800 text-sm text-center transition-all duration-300"
->
+      id="successMessage"
+      class="hidden mb-8 max-w-lg mx-auto rounded-lg bg-green-50 border border-green-300 p-4 text-green-800 text-sm text-center"
+    >
+      ✅ Thank you! Your message has been sent successfully.  
+      We will contact you shortly.
+    </div>
 
     <div class="grid md:grid-cols-2 gap-12 bg-white rounded-2xl shadow-sm p-10">
 
-<div
-  id="successMessage"
-  class="hidden col-span-2 mb-6 rounded-lg bg-green-50 border border-green-300 p-4 text-green-800"
->
-  ✅ Thank you! Your message has been sent successfully.  
-  We will contact you shortly.
-</div>
-
-      
       <!-- Left: Contact Form -->
- <form
-  action="https://formsubmit.co/info@logikwerk.in"
-  method="POST"
-  class="space-y-6"
-  onsubmit="handleSubmit(event)"
->
-
-
-
-<input type="hidden" name="_subject" value="New Contact Form Submission - Logikwerk">
-<input type="hidden" name="_captcha" value="false">
-<input type="hidden" name="_template" value="table">
-<input type="hidden" name="_next" value="https://www.logikwerk.in/#contact">
+      <form
+        id="contactForm"
+        action="https://formsubmit.co/info@logikwerk.in"
+        method="POST"
+        class="space-y-6"
+      >
+        <input type="hidden" name="_subject" value="New Contact Form Submission - Logikwerk">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
 
         <div>
           <label class="block text-sm font-medium mb-1">Name</label>
@@ -478,7 +466,7 @@
             type="text"
             name="Name"
             required
-            class="w-full border px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+            class="w-full border px-4 py-3 rounded focus:ring-2 focus:ring-blue-600"
           />
         </div>
 
@@ -488,7 +476,7 @@
             type="email"
             name="Email"
             required
-            class="w-full border px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+            class="w-full border px-4 py-3 rounded focus:ring-2 focus:ring-blue-600"
           />
         </div>
 
@@ -498,7 +486,7 @@
             name="Message"
             rows="5"
             required
-            class="w-full border px-4 py-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+            class="w-full border px-4 py-3 rounded focus:ring-2 focus:ring-blue-600"
           ></textarea>
         </div>
 
@@ -512,42 +500,38 @@
 
       <!-- Right: Company Info -->
       <div class="space-y-6 text-slate-700">
-
         <div>
-          <h3 class="font-semibold text-lg mb-1">Logikwerk Private Limited</h3>
-          <p class="text-sm">
-            Enterprise AI & Data Analytics Solutions
-          </p>
+          <h3 class="font-semibold text-lg">Logikwerk Private Limited</h3>
+          <p class="text-sm">Enterprise AI & Data Analytics Solutions</p>
         </div>
 
         <div>
-          <h4 class="font-medium mb-1">Email</h4>
+          <h4 class="font-medium">Email</h4>
           <p class="text-sm">info@logikwerk.in</p>
         </div>
 
         <div>
-          <h4 class="font-medium mb-1">Office Address</h4>
+          <h4 class="font-medium">Office Address</h4>
           <p class="text-sm leading-relaxed">
             SY NO.12, Acendia Ark,<br>
             White Field Rd, Kondapur,<br>
-            K.V, Serilingampalle (M),<br>
             Hyderabad, Telangana 500019
           </p>
         </div>
 
         <div>
-          <h4 class="font-medium mb-1">Business Hours</h4>
+          <h4 class="font-medium">Business Hours</h4>
           <p class="text-sm">
             Monday – Friday<br>
             9:30 AM – 6:30 PM IST
           </p>
         </div>
-
       </div>
 
     </div>
   </div>
 </section>
+
     <footer class="border-t border-gray-200 bg-white py-6 text-center text-sm text-gray-500">
   © <span id="year"></span> Logikwerk Private Limited. All rights reserved.
 </footer>
