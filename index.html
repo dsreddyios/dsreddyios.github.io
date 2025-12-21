@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -521,6 +522,10 @@
     </div>
   </div>
 </section>
+    <footer class="border-t border-gray-200 bg-white py-6 text-center text-sm text-gray-500">
+  © <span id="year"></span> Logikwerk Private Limited. All rights reserved.
+</footer>
+
  <script>
     const menuBtn = document.getElementById("menu-btn");
     const mobileMenu = document.getElementById("mobile-menu");
@@ -528,8 +533,9 @@
     menuBtn.onclick = function () {
       mobileMenu.classList.toggle("hidden");
     };
+      document.getElementById("year").textContent = new Date().getFullYear();
+
   </script>
 
 </body>
 </html>
-
