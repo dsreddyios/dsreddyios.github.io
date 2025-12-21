@@ -456,7 +456,6 @@
         method="POST"
         class="space-y-6"
       >
-        <input type="hidden" name="_subject" value="New Contact Form Submission - Logikwerk">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
 
@@ -565,6 +564,28 @@
 
     return false;
   }
+</script>
+<script>
+  const form = document.getElementById("contactForm");
+  const successMessage = document.getElementById("successMessage");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // 🚫 stop redirect
+
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" }
+    })
+    .then(() => {
+      successMessage.classList.remove("hidden");
+      form.reset();
+      successMessage.scrollIntoView({ behavior: "smooth" });
+    })
+    .catch(() => {
+      alert("Something went wrong. Please try again.");
+    });
+  });
 </script>
 
 
