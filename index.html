@@ -1,594 +1,1251 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  
-
 <head>
-<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-  <meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-
-  <title>Logikwerk Private Limited | Enterprise AI & Data Analytics</title>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<meta name="description"
-      content="Logikwerk Private Limited delivers enterprise AI, data analytics, and cloud engineering solutions for modern businesses.">
-
-<meta name="keywords"
-      content="Enterprise AI, Data Analytics, Cloud Engineering, Logikwerk, AI Solutions India">
-
-<meta name="robots" content="index, follow">
-
-<link rel="canonical" href="https://www.logikwerk.in">
-
-<!-- Preconnect for performance -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Logikwerk Private Limited | Enterprise AI & Data Solutions</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#1E3A8A',   /* corporate blue */
-            secondary: '#0F172A' /* dark slate */
-          }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logikwerk | Enterprise AI & Data Analytics Solutions</title>
+    
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* ===== CSS RESET & VARIABLES ===== */
+        :root {
+            --primary: #4a6cf7;
+            --primary-dark: #3a5ce5;
+            --secondary: #6c757d;
+            --dark: #1a1a1a;
+            --light: #ffffff;
+            --gray-light: #f8f9fa;
+            --gray: #e9ecef;
+            --gray-dark: #495057;
+            --success: #28a745;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
         }
-      }
-    }
-  </script>
 
-  <!-- Favicon -->
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<link rel="manifest" href="/site.webmanifest">
-<meta name="theme-color" content="#1E3A8A">
+        html {
+            scroll-behavior: smooth;
+        }
 
-  
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            color: var(--secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--primary);
+            color: var(--light);
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background-color: rgba(74, 108, 247, 0.1);
+        }
+
+        .card {
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* ===== HEADER & NAVIGATION ===== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.2rem 2rem;
+        }
+
+        /* Logo Styles */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-img {
+            height: 50px;
+            width: auto;
+            transition: var(--transition);
+        }
+
+        .logo-img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            position: relative;
+            padding: 0.5rem 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: var(--primary);
+        }
+
+        .mobile-toggle {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--dark);
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            padding: 10rem 0 5rem;
+            background: linear-gradient(135deg, #f5f7ff 0%, #eef1ff 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h400v400H0V0zm50 50h300v300H50V50z' fill='%234a6cf7' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .hero-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content h1 {
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            margin-bottom: 2.5rem;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            line-height: 1;
+        }
+
+        .stat-text {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            margin-top: 0.5rem;
+        }
+
+        .hero-visual {
+            position: relative;
+        }
+
+        .visual-placeholder {
+            background: linear-gradient(135deg, var(--primary), #6a11cb);
+            border-radius: 20px;
+            padding: 2rem;
+            color: white;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            box-shadow: var(--shadow-lg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .visual-placeholder::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+            animation: float 20s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            100% {
+                transform: translate(-20px, -20px) rotate(360deg);
+            }
+        }
+
+        .ai-elements {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            width: 100%;
+        }
+
+        .ai-element {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 1rem;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        /* ===== SERVICES SECTION ===== */
+        .services {
+            background-color: var(--gray-light);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+        }
+
+        .service-features {
+            margin-top: 1.5rem;
+        }
+
+        .service-features li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .service-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+        }
+
+        /* ===== INDUSTRIES SECTION ===== */
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .industry-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        /* ===== CAPABILITIES SECTION ===== */
+        .capabilities {
+            background-color: var(--gray-light);
+        }
+
+        .capabilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .capability-item {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .capability-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+        }
+
+        /* ===== CAREERS SECTION ===== */
+        .careers-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .job-card {
+            border-left: 4px solid var(--primary);
+        }
+
+        .job-details {
+            margin-top: 1rem;
+        }
+
+        .job-details li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .job-details li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+        }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact {
+            background-color: var(--dark);
+            color: var(--light);
+        }
+
+        .contact .section-title h2,
+        .contact .section-title p {
+            color: var(--light);
+        }
+
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+        }
+
+        .contact-info h3 {
+            margin-bottom: 2rem;
+        }
+
+        .contact-details {
+            margin-top: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-icon {
+            font-size: 1.2rem;
+            color: var(--primary);
+            margin-right: 1rem;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-form {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border-radius: var(--border-radius);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--light);
+            font-family: inherit;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        textarea.form-control {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .form-submit {
+            background-color: var(--primary);
+            color: var(--light);
+            border: none;
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .form-submit:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .success-message {
+            display: none;
+            background-color: rgba(40, 167, 69, 0.2);
+            border: 1px solid var(--success);
+            color: var(--success);
+            padding: 1rem;
+            border-radius: var(--border-radius);
+            margin-top: 1rem;
+            text-align: center;
+        }
+
+        /* ===== FOOTER ===== */
+        footer {
+            background-color: #111;
+            color: var(--light);
+            padding: 3rem 0 1.5rem;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-logo-img {
+            height: 40px;
+            width: auto;
+            margin-bottom: 1rem;
+            transition: var(--transition);
+        }
+
+        .footer-logo-img:hover {
+            opacity: 0.9;
+        }
+
+        .footer-about p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-links h4,
+        .footer-contact h4 {
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer-links ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-links ul li a:hover {
+            color: var(--primary);
+        }
+
+        .footer-contact p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background-color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE DESIGN ===== */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            h2 {
+                font-size: 2.2rem;
+            }
+            
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+            
+            .hero-content {
+                text-align: center;
+            }
+            
+            .hero-btns {
+                justify-content: center;
+            }
+            
+            .hero-stats {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 1rem;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                flex-direction: column;
+                background-color: var(--light);
+                text-align: center;
+                padding: 2rem 0;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+                transition: var(--transition);
+                z-index: 999;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-link {
+                padding: 1rem;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .hero {
+                padding: 8rem 0 3rem;
+            }
+            
+            .hero-btns {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+            
+            .hero-stats {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .logo-img {
+                height: 40px;
+            }
+            
+            .footer-logo-img {
+                height: 35px;
+            }
+            
+            .section {
+                padding: 3rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .card {
+                padding: 1.5rem;
+            }
+            
+            .hero-stats {
+                gap: 1.5rem;
+            }
+            
+            .logo-img {
+                height: 35px;
+            }
+        }
+    </style>
 </head>
-
-
-<body class="bg-white text-slate-800 scroll-smooth pt-16">
-  
-<header
-  id="site-header"
-  class="fixed top-0 left-0 w-full bg-white z-50 border-b transition-shadow">
-
-  <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-
-    <!-- Logo -->
-    <a href="/" class="flex items-center">
-      <img
-        src="logo.png"
-        alt="Logikwerk Private Limited"
-        class="h-10 w-auto object-contain"
-      />
-    </a>
-
-    <!-- Desktop Nav -->
-    <nav class="hidden md:flex items-center space-x-10 text-sm font-medium">
-      <a href="#about" class="hover:text-blue-700">About</a>
-      <a href="#services" class="hover:text-blue-700">Services</a>
-      <a href="#industries" class="hover:text-blue-700">Industries</a>
-      <a href="#careers" class="hover:text-blue-700">Careers</a>
-      <a href="#contact" class="text-blue-700">Contact</a>
-    </nav>
-
-    <!-- Mobile Button (VISIBLE ON MOBILE) -->
-    <button
-      id="menu-btn"
-      type="button"
-      class="md:hidden flex items-center justify-center h-10 w-10 rounded hover:bg-slate-100 text-xl">
-      ☰
-    </button>
-
-  </div>
-
-  <!-- Mobile Menu -->
-  <div
-    id="mobile-menu"
-    class="hidden bg-white border-t md:hidden">
-
-    <nav class="flex flex-col px-6 py-4 space-y-4 text-sm font-medium">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#industries">Industries</a>
-      <a href="#careers">Careers</a>
-      <a href="#contact" class="text-blue-700">Contact</a>
-    </nav>
-
-  </div>
-
-</header>
-<!-- ================= HERO ================= -->
-<section class="pt-32 pb-24 bg-gradient-to-b from-blue-50 to-white">
-  <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-
-    <!-- Left Content -->
-    <div>
-      <div class="border-l-4 border-blue-700 pl-4 mb-6">
-        <h1 class="text-4xl md:text-5xl font-bold text-slate-900 leading-tight">
-          Enterprise AI &<br />Data Analytics Solutions
-        </h1>
-      </div>
-
-      <p class="text-slate-600 text-lg mb-8 max-w-xl">
-        Logikwerk Private Limited helps organizations design, build,
-        and scale intelligent systems using Artificial Intelligence
-        and advanced data analytics.
-      </p>
-
-      <div class="flex gap-4">
-        <a href="#contact"
-           class="bg-blue-700 text-white px-6 py-3 text-sm font-semibold rounded hover:bg-blue-800 transition">
-          Speak with Our Team
-        </a>
-        <a href="#services"
-           class="border border-blue-700 text-blue-700 px-6 py-3 text-sm font-semibold rounded hover:bg-blue-50 transition">
-          Our Services
-        </a>
-      </div>
-    </div>
-
-    <!-- Right Visual -->
-    <div class="hidden md:block">
-      <div class="bg-white rounded-xl shadow-lg p-8">
-        <ul class="space-y-4 text-sm text-slate-700">
-          <li>✔ Enterprise AI Platforms</li>
-          <li>✔ Data Engineering & Analytics</li>
-          <li>✔ Cloud-Native Architecture</li>
-          <li>✔ Security & Compliance</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section id="industries" class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <h2 class="text-3xl font-bold text-slate-900 mb-12">
-      Industries We Serve
-    </h2>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-      <!-- Card -->
-      <div class="border rounded-xl p-6 hover:shadow-lg transition">
-        <h3 class="font-semibold text-lg mb-2">Banking & Finance</h3>
-        <p class="text-sm text-slate-600">
-          AI-driven risk analytics, fraud detection, and automation.
-        </p>
-      </div>
-
-      <div class="border rounded-xl p-6 hover:shadow-lg transition">
-        <h3 class="font-semibold text-lg mb-2">Healthcare</h3>
-        <p class="text-sm text-slate-600">
-          Predictive analytics, patient insights, and compliance systems.
-        </p>
-      </div>
-
-      <div class="border rounded-xl p-6 hover:shadow-lg transition">
-        <h3 class="font-semibold text-lg mb-2">Retail & E-Commerce</h3>
-        <p class="text-sm text-slate-600">
-          Demand forecasting, personalization, and supply optimization.
-        </p>
-      </div>
-
-      <div class="border rounded-xl p-6 hover:shadow-lg transition">
-        <h3 class="font-semibold text-lg mb-2">Manufacturing</h3>
-        <p class="text-sm text-slate-600">
-          Predictive maintenance and operational intelligence.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ================= about ================= -->
-
-<section id="about" class="py-24 bg-white">
-  <div class="max-w-6xl mx-auto px-6">
-
-    <h2 class="text-3xl font-semibold text-slate-900 mb-6 relative inline-block">
-      About Logikwerk
-      <span class="absolute left-0 -bottom-2 w-16 h-1 bg-blue-800"></span>
-    </h2>
-
-    <div class="bg-blue-50 border-l-4 border-blue-800 p-6 max-w-4xl">
-      <p class="text-slate-700 leading-relaxed">
-        Logikwerk Private Limited is a technology company specializing in
-        Artificial Intelligence and Data Analytics. We work closely with
-        business leaders to solve complex challenges through scalable,
-        secure, and future-ready digital solutions.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-
-<!-- ================= SERVICES ================= -->
-<section id="services" class="py-24 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <h2 class="text-3xl font-semibold text-slate-900 mb-16 relative inline-block">
-      Our Capabilities
-      <span class="absolute left-0 -bottom-2 w-16 h-1 bg-blue-800"></span>
-    </h2>
-
-    <div class="grid md:grid-cols-3 gap-12">
-
-      <div class="border-t-4 border-blue-800 bg-white p-6">
-        <h3 class="text-xl font-medium mb-3">Artificial Intelligence</h3>
-        <p class="text-slate-600">
-          Machine learning, NLP, computer vision, and predictive intelligence.
-        </p>
-      </div>
-
-      <div class="border-t-4 border-blue-800 bg-white p-6">
-        <h3 class="text-xl font-medium mb-3">Data Analytics & Engineering</h3>
-        <p class="text-slate-600">
-          Enterprise data pipelines, dashboards, and analytics platforms.
-        </p>
-      </div>
-
-      <div class="border-t-4 border-blue-800 bg-white p-6">
-        <h3 class="text-xl font-medium mb-3">Custom AI Solutions</h3>
-        <p class="text-slate-600">
-          Tailored AI products aligned with business objectives.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= Industries ================= -->
-
-
-
-
-<section id="services" class="py-24 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <h2 class="text-3xl font-bold text-slate-900 mb-12">
-      Our Services
-    </h2>
-
-    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-
-      <!-- Service -->
-      <div class="bg-white p-6 rounded-xl shadow-sm">
-        <div class="mb-4 text-blue-700">
-          🤖
+<body>
+    <!-- ===== HEADER & NAVIGATION ===== -->
+    <header id="header">
+        <div class="header-container container">
+            <div class="logo">
+                <a href="#home">
+                    <!-- Your logo from Logo.png -->
+                    <img src="Logo.png" alt="Logikwerk Private Limited - AI & Data Analytics Solutions" class="logo-img">
+                </a>
+            </div>
+            
+            <div class="mobile-toggle" id="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            
+            <nav class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#industries" class="nav-link">Industries</a>
+                <a href="#capabilities" class="nav-link">Capabilities</a>
+                <a href="#careers" class="nav-link">Careers</a>
+                <a href="#contact" class="nav-link btn">Contact</a>
+            </nav>
         </div>
-        <h3 class="font-semibold mb-2">Artificial Intelligence</h3>
-        <p class="text-sm text-slate-600">
-          Enterprise AI models, NLP, and automation solutions.
-        </p>
-      </div>
+    </header>
 
-      <div class="bg-white p-6 rounded-xl shadow-sm">
-        <div class="mb-4 text-blue-700">📊</div>
-        <h3 class="font-semibold mb-2">Data Analytics</h3>
-        <p class="text-sm text-slate-600">
-          Business intelligence, dashboards, and insights.
-        </p>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow-sm">
-        <div class="mb-4 text-blue-700">☁️</div>
-        <h3 class="font-semibold mb-2">Cloud Engineering</h3>
-        <p class="text-sm text-slate-600">
-          Secure, scalable cloud-native architectures.
-        </p>
-      </div>
-
-      <div class="bg-white p-6 rounded-xl shadow-sm">
-        <div class="mb-4 text-blue-700">🔒</div>
-        <h3 class="font-semibold mb-2">Security & Compliance</h3>
-        <p class="text-sm text-slate-600">
-          Governance, risk, and compliance automation.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ================= CAREERS ================= -->
-
-<section id="careers" class="py-24 bg-white">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <h2 class="text-3xl font-bold text-slate-900 mb-12">
-      Careers at Logikwerk
-    </h2>
-
-    <!-- Full-Time Roles -->
-    <div class="grid md:grid-cols-2 gap-10">
-
-      <!-- Associate Software Engineer -->
-      <div class="border rounded-xl p-8 hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-4">
-          Associate Software Engineer
-        </h3>
-
-        <ul class="text-sm text-slate-600 space-y-2 mb-6">
-          <li><strong>Qualification:</strong> BE / BTech / BCA</li>
-          <li><strong>Pass Out Year:</strong> 2024 / 2025</li>
-          <li><strong>Location:</strong> Hyderabad</li>
-        </ul>
-
-        <a
-          href="mailto:careers@logikwerk.in?subject=Application - Associate Software Engineer"
-          class="text-blue-700 font-semibold hover:underline"
-        >
-          Apply via Email → careers@logikwerk.in
-        </a>
-      </div>
-
-      <!-- HR Executive -->
-      <div class="border rounded-xl p-8 hover:shadow-lg transition">
-        <h3 class="text-xl font-semibold mb-4">
-          HR Executive
-        </h3>
-
-        <ul class="text-sm text-slate-600 space-y-2 mb-6">
-          <li><strong>Qualification:</strong> Any Graduate / MBA (HR preferred)</li>
-          <li><strong>Experience:</strong> 0–2 Years</li>
-          <li><strong>Location:</strong> Hyderabad</li>
-        </ul>
-
-        <a
-          href="mailto:careers@logikwerk.in?subject=Application - HR Executive"
-          class="text-blue-700 font-semibold hover:underline"
-        >
-         Apply via Email → careers@logikwerk.in
-        </a>
-      </div>
-
-    </div>
-
-    <!-- Internship Section -->
-    <div class="mt-20">
-
-      <h3 class="text-2xl font-semibold text-slate-900 mb-10">
-        Internship Opportunities
-      </h3>
-
-      <!-- SAME GRID AS ABOVE -->
-      <div class="grid md:grid-cols-2 gap-10">
-
-        <div class="border rounded-xl p-8 hover:shadow-lg transition">
-          <h4 class="text-xl font-semibold mb-4">
-            Software / AI Intern
-          </h4>
-
-          <ul class="text-sm text-slate-600 space-y-2 mb-6">
-            <li><strong>Eligibility:</strong> BE / BTech / BCA / MCA</li>
-            <li><strong>Pass Out:</strong> 2024 / 2025 / 2026</li>
-            <li><strong>Duration:</strong> 3 – 6 Months</li>
-            <li><strong>Location:</strong> Hyderabad (Onsite / Hybrid)</li>
-          </ul>
-
-          <a
-            href="mailto:careers@logikwerk.in?subject=Application - Internship"
-            class="text-blue-700 font-semibold hover:underline"
-          >
-            Apply for Internship → careers@logikwerk.in
-          </a>
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="hero-container container">
+            <div class="hero-content">
+                <h1>Enterprise AI & Data Analytics Solutions</h1>
+                <p>Logikwerk helps organizations design, build, and scale intelligent systems using Artificial Intelligence and advanced data analytics.</p>
+                
+                <div class="hero-btns">
+                    <a href="#contact" class="btn">Start Your AI Journey</a>
+                    <a href="#services" class="btn btn-secondary">Explore Services</a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-text">Secure & Compliant</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-text">Platform Monitoring</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">360°</div>
+                        <div class="stat-text">Data Integration</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="visual-placeholder">
+                    <h3 style="margin-bottom: 1.5rem; color: white;">AI-Powered Insights Dashboard</h3>
+                    <div class="ai-elements">
+                        <div class="ai-element">
+                            <i class="fas fa-chart-line"></i>
+                            <p>Predictive Analytics</p>
+                        </div>
+                        <div class="ai-element">
+                            <i class="fas fa-robot"></i>
+                            <p>Machine Learning</p>
+                        </div>
+                        <div class="ai-element">
+                            <i class="fas fa-database"></i>
+                            <p>Data Engineering</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<section class="py-24 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <h2 class="text-3xl font-bold text-slate-900 mb-8">
-      Job Location
-    </h2>
-
-    <p class="text-slate-600 mb-8 max-w-2xl">
-      All current roles are based out of our Hyderabad office.
-      Candidates should be open to onsite or hybrid work models.
-    </p>
-
-    <div class="rounded-2xl overflow-hidden shadow-sm border">
-      <iframe
-        src="https://www.google.com/maps?q=Acendia%20Ark%20Kondapur%20Hyderabad&output=embed"
-        width="100%"
-        height="420"
-        style="border:0;"
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
-    </div>
-
-  </div>
-</section>
-
-
-<section id="contact" class="py-24 bg-slate-50">
-  <div class="max-w-7xl mx-auto px-6">
-
-    <h2 class="text-3xl font-bold text-slate-900 mb-8">
-      Contact Us
-    </h2>
-
-    <!-- ✅ Success Message (OUTSIDE grid) -->
-    <div
-      id="successMessage"
-      class="hidden mb-8 max-w-lg mx-auto rounded-lg bg-green-50 border border-green-300 p-4 text-green-800 text-sm text-center"
-    >
-      ✅ Thank you! Your message has been sent successfully.  
-      We will contact you shortly.
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-12 bg-white rounded-2xl shadow-sm p-10">
-
-      <!-- Left: Contact Form -->
-      <form
-        id="contactForm"
-        action="https://formsubmit.co/info@logikwerk.in"
-        method="POST"
-        class="space-y-6"
-      >
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-
-        <div>
-          <label class="block text-sm font-medium mb-1">Name</label>
-          <input
-            type="text"
-            name="Name"
-            required
-            class="w-full border px-4 py-3 rounded focus:ring-2 focus:ring-blue-600"
-          />
+    <!-- ===== SERVICES SECTION ===== -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>End-to-end AI and data solutions tailored for enterprise transformation and growth.</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card card">
+                    <div class="service-icon">🤖</div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Enterprise AI models, NLP, computer vision, and intelligent automation solutions.</p>
+                    <ul class="service-features">
+                        <li>Machine Learning Pipelines</li>
+                        <li>Predictive Analytics</li>
+                        <li>Natural Language Processing</li>
+                        <li>Computer Vision</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card card">
+                    <div class="service-icon">📊</div>
+                    <h3>Data Analytics</h3>
+                    <p>Business intelligence, real-time dashboards, and actionable data insights.</p>
+                    <ul class="service-features">
+                        <li>Data Warehousing</li>
+                        <li>BI Dashboards</li>
+                        <li>Advanced Analytics</li>
+                        <li>Real-time Reporting</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card card">
+                    <div class="service-icon">☁️</div>
+                    <h3>Cloud Engineering</h3>
+                    <p>Secure, scalable cloud-native architectures for modern applications.</p>
+                    <ul class="service-features">
+                        <li>Cloud Migration</li>
+                        <li>Microservices Architecture</li>
+                        <li>DevOps & CI/CD</li>
+                        <li>Containerization</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card card">
+                    <div class="service-icon">🔒</div>
+                    <h3>Security & Compliance</h3>
+                    <p>Governance, risk management, and compliance automation frameworks.</p>
+                    <ul class="service-features">
+                        <li>Data Governance</li>
+                        <li>Security Audits</li>
+                        <li>Compliance Automation</li>
+                        <li>Risk Management</li>
+                    </ul>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div>
-          <label class="block text-sm font-medium mb-1">Email</label>
-          <input
-            type="email"
-            name="Email"
-            required
-            class="w-full border px-4 py-3 rounded focus:ring-2 focus:ring-blue-600"
-          />
+    <!-- ===== INDUSTRIES SECTION ===== -->
+    <section class="section" id="industries">
+        <div class="container">
+            <div class="section-title">
+                <h2>Industries We Serve</h2>
+                <p>We deliver specialized AI and data solutions tailored to the unique challenges of each sector.</p>
+            </div>
+            
+            <div class="industries-grid">
+                <div class="card">
+                    <div class="industry-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Banking & Finance</h3>
+                    <p>AI-driven risk analytics, fraud detection, algorithmic trading, and process automation for financial institutions.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="industry-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Healthcare</h3>
+                    <p>Predictive analytics, patient insights, medical imaging analysis, and compliance systems for healthcare providers.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="industry-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>Retail & E-Commerce</h3>
+                    <p>Demand forecasting, personalized recommendations, inventory optimization, and customer behavior analytics.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="industry-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Manufacturing</h3>
+                    <p>Predictive maintenance, quality control, supply chain optimization, and operational intelligence for manufacturers.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div>
-          <label class="block text-sm font-medium mb-1">Message</label>
-          <textarea
-            name="Message"
-            rows="5"
-            required
-            class="w-full border px-4 py-3 rounded focus:ring-2 focus:ring-blue-600"
-          ></textarea>
+    <!-- ===== CAPABILITIES SECTION ===== -->
+    <section class="section capabilities" id="capabilities">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Capabilities</h2>
+                <p>Deep expertise across the entire AI and data analytics lifecycle.</p>
+            </div>
+            
+            <div class="capabilities-grid">
+                <div class="capability-item">
+                    <div class="capability-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>Machine learning, NLP, computer vision, and predictive intelligence solutions.</p>
+                </div>
+                
+                <div class="capability-item">
+                    <div class="capability-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Analytics & Engineering</h3>
+                    <p>Enterprise data pipelines, dashboards, and analytics platforms.</p>
+                </div>
+                
+                <div class="capability-item">
+                    <div class="capability-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Custom AI Solutions</h3>
+                    <p>Tailored AI products aligned with specific business objectives and challenges.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <button
-          type="submit"
-          class="bg-blue-700 text-white px-6 py-3 rounded font-semibold hover:bg-blue-800 transition"
-        >
-          Send Message
-        </button>
-      </form>
-
-      <!-- Right: Company Info -->
-      <div class="space-y-6 text-slate-700">
-        <div>
-          <h3 class="font-semibold text-lg">Logikwerk Private Limited</h3>
-          <p class="text-sm">Enterprise AI & Data Analytics Solutions</p>
+    <!-- ===== CAREERS SECTION ===== -->
+    <section class="section" id="careers">
+        <div class="container">
+            <div class="section-title">
+                <h2>Careers at Logikwerk</h2>
+                <p>Join our team of AI and data experts. Explore opportunities to grow with us.</p>
+            </div>
+            
+            <div class="careers-container">
+                <div class="job-card card">
+                    <h3>Associate Software Engineer</h3>
+                    <ul class="job-details">
+                        <li><strong>Qualification:</strong> BE / BTech / BCA</li>
+                        <li><strong>Pass Out Year:</strong> 2024 / 2025</li>
+                        <li><strong>Location:</strong> Hyderabad</li>
+                        <li><strong>Experience:</strong> 0-2 years</li>
+                    </ul>
+                    <a href="#contact" class="btn" style="margin-top: 1rem;">Apply Now</a>
+                </div>
+                
+                <div class="job-card card">
+                    <h3>HR Executive</h3>
+                    <ul class="job-details">
+                        <li><strong>Qualification:</strong> Any Graduate / MBA (HR preferred)</li>
+                        <li><strong>Experience:</strong> 0-2 Years</li>
+                        <li><strong>Location:</strong> Hyderabad</li>
+                    </ul>
+                    <a href="#contact" class="btn" style="margin-top: 1rem;">Apply Now</a>
+                </div>
+                
+                <div class="job-card card">
+                    <h3>Internship Opportunities</h3>
+                    <h4 style="margin-top: 1rem;">Software / AI Intern</h4>
+                    <ul class="job-details">
+                        <li><strong>Eligibility:</strong> BE / BTech / BCA / MCA</li>
+                        <li><strong>Pass Out:</strong> 2024 / 2025 / 2026</li>
+                        <li><strong>Duration:</strong> 3 – 6 Months</li>
+                        <li><strong>Location:</strong> Hyderabad (Onsite / Hybrid)</li>
+                    </ul>
+                    <a href="#contact" class="btn" style="margin-top: 1rem;">Apply Now</a>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <p><strong>Job Location:</strong> All current roles are based out of our Hyderabad office. Candidates should be open to onsite or hybrid work models.</p>
+            </div>
         </div>
+    </section>
 
-        <div>
-          <h4 class="font-medium">Email</h4>
-          <p class="text-sm">info@logikwerk.in</p>
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch to discuss how we can transform your business with AI and data analytics.</p>
+            </div>
+            
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Logikwerk Private Limited</h3>
+                    <p>Enterprise AI & Data Analytics Solutions</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p><strong>Email</strong></p>
+                                <p>info@logikwerk.in</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <p><strong>Office Address</strong></p>
+                                <p>SY NO.12, Acendia Ark, White Field Rd, Kondapur, Hyderabad, Telangana 500019</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <p><strong>Business Hours</strong></p>
+                                <p>Monday – Friday<br>9:30 AM – 6:30 PM IST</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="form-submit">Send Message</button>
+                        
+                        <div class="success-message" id="successMessage">
+                            ✅ Thank you! Your message has been sent successfully. We will contact you shortly.
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div>
-          <h4 class="font-medium">Office Address</h4>
-          <p class="text-sm leading-relaxed">
-            SY NO.12, Acendia Ark,<br>
-            White Field Rd, Kondapur,<br>
-            Hyderabad, Telangana 500019
-          </p>
+    <!-- ===== FOOTER ===== -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <a href="#home">
+                            <!-- Footer logo from same Logo.png -->
+                            <img src="Logo.png" alt="Logikwerk Logo" class="footer-logo-img">
+                        </a>
+                    </div>
+                    <p>Logikwerk Private Limited is a technology company specializing in Artificial Intelligence and Data Analytics. We work closely with business leaders to solve complex challenges through scalable, secure, and future-ready digital solutions.</p>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#industries">Industries</a></li>
+                        <li><a href="#capabilities">Capabilities</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-envelope"></i> info@logikwerk.in</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana 500019</p>
+                    <p><i class="fas fa-clock"></i> Mon-Fri: 9:30 AM - 6:30 PM</p>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                &copy; <span id="currentYear"></span> Logikwerk Private Limited. All rights reserved.
+            </div>
         </div>
+    </footer>
 
-        <div>
-          <h4 class="font-medium">Business Hours</h4>
-          <p class="text-sm">
-            Monday – Friday<br>
-            9:30 AM – 6:30 PM IST
-          </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-    <footer class="border-t border-gray-200 bg-white py-6 text-center text-sm text-gray-500">
-  © <span id="year"></span> Logikwerk Private Limited. All rights reserved.
-</footer>
-
- <script>
-    const menuBtn = document.getElementById("menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    menuBtn.onclick = function () {
-      mobileMenu.classList.toggle("hidden");
-    };
-      document.getElementById("year").textContent = new Date().getFullYear();
-
-  </script>
-<script>
-  function handleSubmit(event) {
-    event.preventDefault();
-
-    // Show success message
-    document.getElementById("successMessage").classList.remove("hidden");
-
-    // Reset form
-    event.target.reset();
-
-    // Send form data to FormSubmit
-    fetch(event.target.action, {
-      method: "POST",
-      body: new FormData(event.target),
-      headers: { Accept: "application/json" }
-    });
-
-    return false;
-  }
-</script>
-<script>
-  const form = document.getElementById("contactForm");
-  const successMessage = document.getElementById("successMessage");
-
-  form.addEventListener("submit", function (e) {
-    e.preventDefault(); // 🚫 stop redirect
-
-    fetch(form.action, {
-      method: "POST",
-      body: new FormData(form),
-      headers: { Accept: "application/json" }
-    })
-    .then(() => {
-      successMessage.classList.remove("hidden");
-      form.reset();
-      successMessage.scrollIntoView({ behavior: "smooth" });
-    })
-    .catch(() => {
-      alert("Something went wrong. Please try again.");
-    });
-  });
-</script>
-
-
-
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // Mobile Navigation Toggle
+        const mobileToggle = document.getElementById('mobile-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                mobileToggle.innerHTML = navMenu.classList.contains('active') 
+                    ? '<i class="fas fa-times"></i>' 
+                    : '<i class="fas fa-bars"></i>';
+            });
+        }
+        
+        // Close mobile menu when clicking a link
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
+                
+                // Update active link
+                navLinks.forEach(item => item.classList.remove('active'));
+                link.classList.add('active');
+            });
+        });
+        
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        const successMessage = document.getElementById('successMessage');
+        
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                // In a real implementation, you would send form data to a server here
+                // For demo purposes, we'll just show the success message
+                successMessage.style.display = 'block';
+                
+                // Scroll to show the success message
+                successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                
+                // Reset form after 5 seconds
+                setTimeout(() => {
+                    contactForm.reset();
+                    successMessage.style.display = 'none';
+                }, 5000);
+            });
+        }
+        
+        // Set current year in copyright
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 100) {
+                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
+                header.style.padding = '0';
+            } else {
+                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
+                header.style.padding = '';
+            }
+        });
+        
+        // Update active nav link based on scroll position
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>
