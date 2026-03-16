@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logikwerk | Enterprise AI & Data Analytics Solutions</title>
+    <title>Logikwerk | Enterprise Generative AI Training</title>
     
     <!-- Favicon & App Icons -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -178,7 +177,6 @@
             padding: 1.2rem 2rem;
         }
 
-        /* Logo Styles */
         .logo {
             display: flex;
             align-items: center;
@@ -353,7 +351,7 @@
             backdrop-filter: blur(10px);
         }
 
-        /* ===== SERVICES SECTION ===== */
+        /* ===== COURSES SECTION ===== */
         .services {
             background-color: var(--gray-light);
         }
@@ -392,7 +390,7 @@
             font-weight: bold;
         }
 
-        /* ===== INDUSTRIES SECTION ===== */
+        /* ===== AUDIENCE SECTION ===== */
         .industries-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -405,7 +403,7 @@
             color: var(--primary);
         }
 
-        /* ===== CAPABILITIES SECTION ===== */
+        /* ===== CURRICULUM SECTION ===== */
         .capabilities {
             background-color: var(--gray-light);
         }
@@ -427,7 +425,7 @@
             color: var(--primary);
         }
 
-        /* ===== CAREERS SECTION ===== */
+        /* ===== PROGRAMS SECTION ===== */
         .careers-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -453,6 +451,82 @@
             position: absolute;
             left: 0;
             color: var(--primary);
+        }
+
+        /* ===== WHY CHOOSE US SECTION ===== */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        /* ===== INSTRUCTORS SECTION ===== */
+        .instructors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+        }
+
+        .instructor-card {
+            text-align: center;
+        }
+
+        .instructor-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: var(--gray);
+            margin: 0 auto 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary);
+            border: 4px solid var(--primary);
+        }
+
+        .instructor-name {
+            margin-bottom: 0.5rem;
+        }
+
+        .instructor-title {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== CERTIFICATION SECTION ===== */
+        .cert-path {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .path-item {
+            text-align: center;
+            padding: 2rem;
+            background: var(--light);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .path-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
         }
 
         /* ===== CONTACT SECTION ===== */
@@ -767,8 +841,6 @@
         <div class="header-container container">
             <div class="logo">
                 <a href="#home">
-                    <!-- Your logo from Logo.png -->
-                   
                     <img src="./logo.png" alt="Logikwerk" class="logo-img" onerror="this.src='https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPO/main/logo.png'">
                 </a>
             </div>
@@ -779,11 +851,13 @@
             
             <nav class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link active">Home</a>
-                <a href="#services" class="nav-link">Services</a>
-                <a href="#industries" class="nav-link">Industries</a>
-                <a href="#capabilities" class="nav-link">Capabilities</a>
-                <a href="#careers" class="nav-link">Careers</a>
-                <a href="#contact" class="nav-link btn">Contact</a>
+                <a href="#services" class="nav-link">Courses</a>
+                <a href="#industries" class="nav-link">Audience</a>
+                <a href="#capabilities" class="nav-link">Curriculum</a>
+                <a href="#careers" class="nav-link">Programs</a>
+                <a href="#why-us" class="nav-link">Why Us</a>
+                <a href="#instructors" class="nav-link">Instructors</a>
+                <a href="#contact" class="nav-link btn">Enroll Now</a>
             </nav>
         </div>
     </header>
@@ -792,45 +866,45 @@
     <section class="hero" id="home">
         <div class="hero-container container">
             <div class="hero-content">
-                <h1>Enterprise AI & Data Analytics Solutions</h1>
-                <p>Logikwerk helps organizations design, build, and scale intelligent systems using Artificial Intelligence and advanced data analytics.</p>
+                <h1>Enterprise-Grade Generative AI Training</h1>
+                <p>Logikwerk delivers comprehensive, hands-on training programs designed for organizations and professionals seeking to master generative AI technologies. Our curriculum bridges theory and real-world application.</p>
                 
                 <div class="hero-btns">
-                    <a href="#contact" class="btn">Start Your AI Journey</a>
-                    <a href="#services" class="btn btn-secondary">Explore Services</a>
+                    <a href="#services" class="btn">Explore Courses</a>
+                    <a href="#contact" class="btn btn-secondary">Request Brochure</a>
                 </div>
                 
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-text">Secure & Compliant</div>
+                        <div class="stat-number">10+</div>
+                        <div class="stat-text">Expert-Led Courses</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">24/7</div>
-                        <div class="stat-text">Platform Monitoring</div>
+                        <div class="stat-number">2,500+</div>
+                        <div class="stat-text">Professionals Trained</div>
                     </div>
                     <div class="stat-item">
-                        <div class="stat-number">360°</div>
-                        <div class="stat-text">Data Integration</div>
+                        <div class="stat-number">4.9/5</div>
+                        <div class="stat-text">Post-Training Satisfaction</div>
                     </div>
                 </div>
             </div>
             
             <div class="hero-visual">
                 <div class="visual-placeholder">
-                    <h3 style="margin-bottom: 1.5rem; color: white;">AI-Powered Insights Dashboard</h3>
+                    <h3 style="margin-bottom: 1.5rem; color: white;">Comprehensive Learning Path</h3>
                     <div class="ai-elements">
                         <div class="ai-element">
-                            <i class="fas fa-chart-line"></i>
-                            <p>Predictive Analytics</p>
+                            <i class="fas fa-comment-dots"></i>
+                            <p>LLMs & NLP</p>
                         </div>
                         <div class="ai-element">
-                            <i class="fas fa-robot"></i>
-                            <p>Machine Learning</p>
+                            <i class="fas fa-image"></i>
+                            <p>Image Generation</p>
                         </div>
                         <div class="ai-element">
-                            <i class="fas fa-database"></i>
-                            <p>Data Engineering</p>
+                            <i class="fas fa-code"></i>
+                            <p>Prompt Engineering</p>
                         </div>
                     </div>
                 </div>
@@ -838,191 +912,428 @@
         </div>
     </section>
 
-    <!-- ===== SERVICES SECTION ===== -->
+    <!-- ===== COURSES SECTION ===== -->
     <section class="section services" id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Our Services</h2>
-                <p>End-to-end AI and data solutions tailored for enterprise transformation and growth.</p>
+                <h2>Our Courses</h2>
+                <p>In-depth, practical training across the generative AI landscape.</p>
             </div>
             
             <div class="services-grid">
                 <div class="service-card card">
                     <div class="service-icon">🤖</div>
-                    <h3>Artificial Intelligence</h3>
-                    <p>Enterprise AI models, NLP, computer vision, and intelligent automation solutions.</p>
+                    <h3>Generative AI Fundamentals</h3>
+                    <p>Build a solid foundation in generative AI concepts, models, and tools. Ideal for beginners and cross-functional teams.</p>
                     <ul class="service-features">
-                        <li>Machine Learning Pipelines</li>
-                        <li>Predictive Analytics</li>
-                        <li>Natural Language Processing</li>
-                        <li>Computer Vision</li>
+                        <li>Introduction to LLMs & transformer architecture</li>
+                        <li>Prompt engineering basics & best practices</li>
+                        <li>Ethics, bias, and responsible AI</li>
+                        <li>Hands-on with ChatGPT, Claude, and Gemini</li>
+                        <li>Capstone: Build a simple AI assistant</li>
                     </ul>
                 </div>
                 
                 <div class="service-card card">
-                    <div class="service-icon">📊</div>
-                    <h3>Data Analytics</h3>
-                    <p>Business intelligence, real-time dashboards, and actionable data insights.</p>
+                    <div class="service-icon">⚡</div>
+                    <h3>Advanced Prompt Engineering</h3>
+                    <p>Master techniques to elicit precise, high-quality outputs from generative models for complex tasks.</p>
                     <ul class="service-features">
-                        <li>Data Warehousing</li>
-                        <li>BI Dashboards</li>
-                        <li>Advanced Analytics</li>
-                        <li>Real-time Reporting</li>
+                        <li>Chain-of-thought & few-shot prompting</li>
+                        <li>Prompt chaining and decomposition</li>
+                        <li>Role-based and persona prompting</li>
+                        <li>Automated prompt optimization</li>
+                        <li>Real-world case studies (code generation, analysis)</li>
                     </ul>
                 </div>
                 
                 <div class="service-card card">
-                    <div class="service-icon">☁️</div>
-                    <h3>Cloud Engineering</h3>
-                    <p>Secure, scalable cloud-native architectures for modern applications.</p>
+                    <div class="service-icon">🔧</div>
+                    <h3>Fine-Tuning & Deployment</h3>
+                    <p>Learn to customize open-source models and deploy them in production environments.</p>
                     <ul class="service-features">
-                        <li>Cloud Migration</li>
-                        <li>Microservices Architecture</li>
-                        <li>DevOps & CI/CD</li>
-                        <li>Containerization</li>
+                        <li>Fine-tuning LLaMA, Mistral, and Phi</li>
+                        <li>Parameter-efficient fine-tuning (LoRA, QLoRA)</li>
+                        <li>RLHF fundamentals and preference tuning</li>
+                        <li>Model quantization and optimization</li>
+                        <li>Deployment with Hugging Face, vLLM, and cloud APIs</li>
                     </ul>
                 </div>
                 
                 <div class="service-card card">
-                    <div class="service-icon">🔒</div>
-                    <h3>Security & Compliance</h3>
-                    <p>Governance, risk management, and compliance automation frameworks.</p>
+                    <div class="service-icon">🎨</div>
+                    <h3>Generative AI for Creatives</h3>
+                    <p>Harness AI for image, video, audio, and 3D content generation. Perfect for creative teams and content producers.</p>
                     <ul class="service-features">
-                        <li>Data Governance</li>
-                        <li>Security Audits</li>
-                        <li>Compliance Automation</li>
-                        <li>Risk Management</li>
+                        <li>Image generation (Stable Diffusion, DALL·E, Midjourney)</li>
+                        <li>Video synthesis (Runway, Pika, Sora)</li>
+                        <li>Audio and music generation</li>
+                        <li>3D model generation</li>
+                        <li>Workflow integration and prompt crafting for creatives</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== INDUSTRIES SECTION ===== -->
+    <!-- ===== AUDIENCE SECTION ===== -->
     <section class="section" id="industries">
         <div class="container">
             <div class="section-title">
-                <h2>Industries We Serve</h2>
-                <p>We deliver specialized AI and data solutions tailored to the unique challenges of each sector.</p>
+                <h2>Who Should Attend</h2>
+                <p>Our programs are tailored for diverse roles and industries.</p>
             </div>
             
             <div class="industries-grid">
                 <div class="card">
                     <div class="industry-icon">
-                        <i class="fas fa-university"></i>
+                        <i class="fas fa-code"></i>
                     </div>
-                    <h3>Banking & Finance</h3>
-                    <p>AI-driven risk analytics, fraud detection, algorithmic trading, and process automation for financial institutions.</p>
+                    <h3>Software Developers</h3>
+                    <p>Integrate generative AI into applications using APIs, SDKs, and open-source models. Learn to build AI-powered features and products.</p>
                 </div>
                 
                 <div class="card">
                     <div class="industry-icon">
-                        <i class="fas fa-heartbeat"></i>
+                        <i class="fas fa-chart-line"></i>
                     </div>
-                    <h3>Healthcare</h3>
-                    <p>Predictive analytics, patient insights, medical imaging analysis, and compliance systems for healthcare providers.</p>
+                    <h3>Data Scientists & ML Engineers</h3>
+                    <p>Deepen your understanding of model architecture, fine-tuning, evaluation, and deployment. Gain hands-on experience with cutting-edge techniques.</p>
                 </div>
                 
                 <div class="card">
                     <div class="industry-icon">
-                        <i class="fas fa-shopping-cart"></i>
+                        <i class="fas fa-briefcase"></i>
                     </div>
-                    <h3>Retail & E-Commerce</h3>
-                    <p>Demand forecasting, personalized recommendations, inventory optimization, and customer behavior analytics.</p>
+                    <h3>Product Managers & Business Leaders</h3>
+                    <p>Understand capabilities, limitations, and strategic implementation of generative AI. Identify use cases and drive AI adoption in your organization.</p>
                 </div>
                 
                 <div class="card">
                     <div class="industry-icon">
-                        <i class="fas fa-industry"></i>
+                        <i class="fas fa-paint-brush"></i>
                     </div>
-                    <h3>Manufacturing</h3>
-                    <p>Predictive maintenance, quality control, supply chain optimization, and operational intelligence for manufacturers.</p>
+                    <h3>Content Creators & Designers</h3>
+                    <p>Leverage AI tools to accelerate creative workflows, generate unique content, and explore new forms of expression.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="industry-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Risk & Compliance Professionals</h3>
+                    <p>Learn about AI governance, bias mitigation, and regulatory considerations to ensure responsible AI deployment.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="industry-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Academics & Researchers</h3>
+                    <p>Stay current with the latest advancements in generative AI and apply them to research or teaching.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== CAPABILITIES SECTION ===== -->
+    <!-- ===== CURRICULUM SECTION ===== -->
     <section class="section capabilities" id="capabilities">
         <div class="container">
             <div class="section-title">
-                <h2>Our Capabilities</h2>
-                <p>Deep expertise across the entire AI and data analytics lifecycle.</p>
+                <h2>Comprehensive Curriculum</h2>
+                <p>Key topics covered across our training programs.</p>
             </div>
             
             <div class="capabilities-grid">
                 <div class="capability-item">
                     <div class="capability-icon">
-                        <i class="fas fa-cogs"></i>
+                        <i class="fas fa-language"></i>
                     </div>
-                    <h3>Artificial Intelligence</h3>
-                    <p>Machine learning, NLP, computer vision, and predictive intelligence solutions.</p>
+                    <h3>Large Language Models (LLMs)</h3>
+                    <p>Architecture, training, fine-tuning, and applications of models like GPT, LLaMA, Claude, Gemini, and Mistral.</p>
                 </div>
                 
                 <div class="capability-item">
                     <div class="capability-icon">
-                        <i class="fas fa-database"></i>
+                        <i class="fas fa-image"></i>
                     </div>
-                    <h3>Data Analytics & Engineering</h3>
-                    <p>Enterprise data pipelines, dashboards, and analytics platforms.</p>
+                    <h3>Image & Video Generation</h3>
+                    <p>Diffusion models (Stable Diffusion, DALL·E 2/3), GANs, and emerging video generation techniques.</p>
                 </div>
                 
                 <div class="capability-item">
                     <div class="capability-icon">
-                        <i class="fas fa-laptop-code"></i>
+                        <i class="fas fa-pen"></i>
                     </div>
-                    <h3>Custom AI Solutions</h3>
-                    <p>Tailored AI products aligned with specific business objectives and challenges.</p>
+                    <h3>Prompt Engineering</h3>
+                    <p>Crafting effective prompts, iterative refinement, advanced strategies, and evaluation metrics.</p>
+                </div>
+                
+                <div class="capability-item">
+                    <div class="capability-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Model Fine-Tuning</h3>
+                    <p>Full fine-tuning, parameter-efficient methods, instruction tuning, and alignment techniques.</p>
+                </div>
+                
+                <div class="capability-item">
+                    <div class="capability-icon">
+                        <i class="fas fa-balance-scale"></i>
+                    </div>
+                    <h3>AI Ethics & Safety</h3>
+                    <p>Bias detection and mitigation, fairness, transparency, and responsible AI frameworks.</p>
+                </div>
+                
+                <div class="capability-item">
+                    <div class="capability-icon">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                    </div>
+                    <h3>Deployment & Scaling</h3>
+                    <p>Serving models via APIs, containerization, orchestration, and monitoring in production.</p>
+                </div>
+                
+                <div class="capability-item">
+                    <div class="capability-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>Retrieval-Augmented Generation (RAG)</h3>
+                    <p>Building knowledge-augmented systems with vector databases and external data sources.</p>
+                </div>
+                
+                <div class="capability-item">
+                    <div class="capability-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>AI Agents & Tool Use</h3>
+                    <p>Creating autonomous agents that can reason, plan, and use tools to accomplish tasks.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ===== CAREERS SECTION ===== -->
+    <!-- ===== PROGRAMS SECTION ===== -->
     <section class="section" id="careers">
         <div class="container">
             <div class="section-title">
-                <h2>Careers at Logikwerk</h2>
-                <p>Join our team of AI and data experts. Explore opportunities to grow with us.</p>
+                <h2>Training Programs & Batches</h2>
+                <p>Structured learning paths with flexible schedules.</p>
             </div>
             
             <div class="careers-container">
                 <div class="job-card card">
-                    <h3>Associate Software Engineer</h3>
+                    <h3>Certified Generative AI Developer</h3>
+                    <p><strong>Duration:</strong> 8 weeks (online, live instructor-led)</p>
+                    <p><strong>Next batch:</strong> June 15, 2026</p>
+                    <p><strong>Schedule:</strong> Tue/Thu 6:30–9:30 PM IST</p>
                     <ul class="job-details">
-                        <li><strong>Qualification:</strong> BE / BTech / BCA</li>
-                        <li><strong>Pass Out Year:</strong> 2024 / 2025</li>
-                        <li><strong>Location:</strong> Hyderabad</li>
-                        <li><strong>Experience:</strong> 0-2 years</li>
+                        <li>40+ hours of live instruction</li>
+                        <li>5 hands-on projects</li>
+                        <li>Capstone: Build a production-ready AI app</li>
+                        <li>1-on-1 mentorship sessions</li>
+                        <li>Course fee: ₹85,000 + GST</li>
                     </ul>
-                    <a href="#contact" class="btn" style="margin-top: 1rem;">Apply Now</a>
+                    <a href="#contact" class="btn" style="margin-top: 1rem;">Enroll Now</a>
                 </div>
                 
                 <div class="job-card card">
-                    <h3>HR Executive</h3>
+                    <h3>Generative AI for Business Leaders</h3>
+                    <p><strong>Duration:</strong> 2-day intensive workshop</p>
+                    <p><strong>Next batch:</strong> July 8–9, 2026</p>
+                    <p><strong>Format:</strong> Online or In-person (Hyderabad)</p>
                     <ul class="job-details">
-                        <li><strong>Qualification:</strong> Any Graduate / MBA (HR preferred)</li>
-                        <li><strong>Experience:</strong> 0-2 Years</li>
-                        <li><strong>Location:</strong> Hyderabad</li>
+                        <li>Strategic overview of gen AI capabilities</li>
+                        <li>Use case identification & prioritization</li>
+                        <li>Risk management & governance</li>
+                        <li>Vendor selection & implementation roadmap</li>
+                        <li>Course fee: ₹45,000 + GST</li>
                     </ul>
-                    <a href="#contact" class="btn" style="margin-top: 1rem;">Apply Now</a>
+                    <a href="#contact" class="btn" style="margin-top: 1rem;">Enroll Now</a>
                 </div>
                 
                 <div class="job-card card">
-                    <h3>Internship Opportunities</h3>
-                    <h4 style="margin-top: 1rem;">Software / AI Intern</h4>
+                    <h3>Hands-on Prompt Engineering Bootcamp</h3>
+                    <p><strong>Duration:</strong> 4 weeks (online)</p>
+                    <p><strong>Next batch:</strong> June 22, 2026</p>
+                    <p><strong>Schedule:</strong> Mon/Wed 7:00–9:30 PM IST</p>
                     <ul class="job-details">
-                        <li><strong>Eligibility:</strong> BE / BTech / BCA / MCA</li>
-                        <li><strong>Pass Out:</strong> 2024 / 2025 / 2026</li>
-                        <li><strong>Duration:</strong> 3 – 6 Months</li>
-                        <li><strong>Location:</strong> Hyderabad (Onsite / Hybrid)</li>
+                        <li>20+ hours of interactive sessions</li>
+                        <li>Real-world exercises & assignments</li>
+                        <li>Access to proprietary prompt library</li>
+                        <li>Certificate of completion</li>
+                        <li>Course fee: ₹35,000 + GST</li>
                     </ul>
-                    <a href="#contact" class="btn" style="margin-top: 1rem;">Apply Now</a>
+                    <a href="#contact" class="btn" style="margin-top: 1rem;">Enroll Now</a>
                 </div>
             </div>
             
             <div style="text-align: center; margin-top: 3rem;">
-                <p><strong>Job Location:</strong> All current roles are based out of our Hyderabad office. Candidates should be open to onsite or hybrid work models.</p>
+                <p><strong>All programs include:</strong> Expert mentorship, hands-on labs, lifetime access to materials, and alumni network.</p>
+                <p><em>Corporate group discounts available. Contact us for custom programs.</em></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== WHY CHOOSE US SECTION ===== -->
+    <section class="section" id="why-us">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Logikwerk</h2>
+                <p>What sets our training apart.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Industry Experts as Instructors</h3>
+                    <p>Learn from practitioners with years of experience building and deploying AI solutions at scale.</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="feature-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Project-Based Learning</h3>
+                    <p>Each course includes real-world projects that simulate actual industry challenges.</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Curriculum Continuously Updated</h3>
+                    <p>We keep pace with the rapidly evolving AI landscape—our materials are refreshed every quarter.</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Corporate Training</h3>
+                    <p>Tailored programs for teams, with flexible delivery options and customized content.</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="feature-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Recognized Certification</h3>
+                    <p>Earn a verifiable certificate that demonstrates your expertise to employers.</p>
+                </div>
+                
+                <div class="feature-card card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Post-Training Support</h3>
+                    <p>Access to alumni community, Q&A forums, and periodic refresher sessions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== INSTRUCTORS SECTION ===== -->
+    <section class="section" id="instructors">
+        <div class="container">
+            <div class="section-title">
+                <h2>Meet Your Instructors</h2>
+                <p>Learn from seasoned AI practitioners and researchers.</p>
+            </div>
+            
+            <div class="instructors-grid">
+                <div class="instructor-card card">
+                    <div class="instructor-img">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="instructor-name">Dr. Arjun Mehta</h3>
+                    <p class="instructor-title">Chief AI Scientist</p>
+                    <p>PhD in Machine Learning, 15+ years in NLP and generative models. Previously led AI teams at Google Research and IBM.</p>
+                </div>
+                
+                <div class="instructor-card card">
+                    <div class="instructor-img">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3 class="instructor-name">Priya Srinivasan</h3>
+                    <p class="instructor-title">Senior AI Architect</p>
+                    <p>Expert in LLM fine-tuning and deployment. 10+ years experience building production AI systems for Fortune 500 companies.</p>
+                </div>
+                
+                <div class="instructor-card card">
+                    <div class="instructor-img">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="instructor-name">Rahul Kapoor</h3>
+                    <p class="instructor-title">Generative AI Engineer</p>
+                    <p>Specializes in prompt engineering and AI agents. Previously built AI solutions at Microsoft and a stealth startup.</p>
+                </div>
+                
+                <div class="instructor-card card">
+                    <div class="instructor-img">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <h3 class="instructor-name">Dr. Sneha Pillai</h3>
+                    <p class="instructor-title">AI Ethics & Governance Lead</p>
+                    <p>PhD in Responsible AI, advisor to multiple AI ethics boards. Helps organizations deploy AI safely and fairly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CERTIFICATION & LEARNING PATHS SECTION ===== -->
+    <section class="section" style="background-color: var(--gray-light);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Certification & Learning Paths</h2>
+                <p>Choose your journey and earn industry-recognized credentials.</p>
+            </div>
+            
+            <div class="cert-path">
+                <div class="path-item">
+                    <div class="path-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3>Foundational Path</h3>
+                    <p>Generative AI Fundamentals + Prompt Engineering Bootcamp</p>
+                    <p><strong>Duration:</strong> 12 weeks</p>
+                    <p><strong>Certification:</strong> Logikwerk Certified AI Practitioner</p>
+                </div>
+                
+                <div class="path-item">
+                    <div class="path-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Technical Path</h3>
+                    <p>All three technical courses + Capstone Project</p>
+                    <p><strong>Duration:</strong> 20 weeks</p>
+                    <p><strong>Certification:</strong> Logikwerk Certified Generative AI Developer</p>
+                </div>
+                
+                <div class="path-item">
+                    <div class="path-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Leadership Path</h3>
+                    <p>Business Leaders Workshop + AI Ethics & Governance modules</p>
+                    <p><strong>Duration:</strong> 3 days</p>
+                    <p><strong>Certification:</strong> Logikwerk Certified AI Strategist</p>
+                </div>
+                
+                <div class="path-item">
+                    <div class="path-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Creative Path</h3>
+                    <p>Generative AI for Creatives + Advanced Prompt Engineering</p>
+                    <p><strong>Duration:</strong> 8 weeks</p>
+                    <p><strong>Certification:</strong> Logikwerk Certified Creative AI Specialist</p>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="#contact" class="btn">Speak with a Learning Advisor</a>
             </div>
         </div>
     </section>
@@ -1032,13 +1343,13 @@
         <div class="container">
             <div class="section-title">
                 <h2>Contact Us</h2>
-                <p>Get in touch to discuss how we can transform your business with AI and data analytics.</p>
+                <p>Have questions? Ready to enroll? Get in touch with our training team.</p>
             </div>
             
             <div class="contact-container">
                 <div class="contact-info">
                     <h3>Logikwerk Private Limited</h3>
-                    <p>Enterprise AI & Data Analytics Solutions</p>
+                    <p>Enterprise Generative AI Training & Solutions</p>
                     
                     <div class="contact-details">
                         <div class="contact-item">
@@ -1047,7 +1358,7 @@
                             </div>
                             <div>
                                 <p><strong>Email</strong></p>
-                                <p>info@logikwerk.in</p>
+                                <p>training@logikwerk.in</p>
                             </div>
                         </div>
                         
@@ -1068,6 +1379,16 @@
                             <div>
                                 <p><strong>Business Hours</strong></p>
                                 <p>Monday – Friday<br>9:30 AM – 6:30 PM IST</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <p><strong>Phone</strong></p>
+                                <p>+91 40 1234 5678</p>
                             </div>
                         </div>
                     </div>
@@ -1092,7 +1413,7 @@
                         
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" class="form-control" required></textarea>
+                            <textarea id="message" class="form-control" required placeholder="Tell us about your training interests, preferred program, or any questions..."></textarea>
                         </div>
                         
                         <button type="submit" class="form-submit">Send Message</button>
@@ -1111,7 +1432,8 @@
         <div class="container">
             <div class="footer-container">
                 <div class="footer-about">
-                    <p>Logikwerk Private Limited is a technology company specializing in Artificial Intelligence and Data Analytics. We work closely with business leaders to solve complex challenges through scalable, secure, and future-ready digital solutions.</p>
+                    <img src="./logo.png" alt="Logikwerk" class="footer-logo-img" onerror="this.style.display='none'">
+                    <p>Logikwerk Private Limited is a technology company specializing in Generative AI training and solutions. We equip professionals and organizations with the skills to harness the power of AI responsibly and effectively.</p>
                     
                     <div class="social-links">
                         <a href="#" class="social-link">
@@ -1133,19 +1455,22 @@
                     <h4>Quick Links</h4>
                     <ul>
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#industries">Industries</a></li>
-                        <li><a href="#capabilities">Capabilities</a></li>
-                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#services">Courses</a></li>
+                        <li><a href="#industries">Audience</a></li>
+                        <li><a href="#capabilities">Curriculum</a></li>
+                        <li><a href="#careers">Programs</a></li>
+                        <li><a href="#why-us">Why Us</a></li>
+                        <li><a href="#instructors">Instructors</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-contact">
                     <h4>Contact Info</h4>
-                    <p><i class="fas fa-envelope"></i> info@logikwerk.in</p>
+                    <p><i class="fas fa-envelope"></i> training@logikwerk.in</p>
                     <p><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana 500019</p>
                     <p><i class="fas fa-clock"></i> Mon-Fri: 9:30 AM - 6:30 PM</p>
+                    <p><i class="fas fa-phone-alt"></i> +91 40 1234 5678</p>
                 </div>
             </div>
             
