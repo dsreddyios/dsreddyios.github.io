@@ -2,50 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logikwerk | Enterprise Generative AI Training</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Nexify | Enterprise IT Solutions & Digital Transformation</title>
     
-    <!-- Favicon & App Icons -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    
-    <!-- Font Awesome for icons -->
+    <!-- Font Awesome 6 (Free) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* ===== CSS RESET & VARIABLES ===== */
-        :root {
-            --primary: #4a6cf7;
-            --primary-dark: #3a5ce5;
-            --secondary: #6c757d;
-            --dark: #1a1a1a;
-            --light: #ffffff;
-            --gray-light: #f8f9fa;
-            --gray: #e9ecef;
-            --gray-dark: #495057;
-            --success: #28a745;
-            --shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.12);
-            --border-radius: 8px;
-            --transition: all 0.3s ease;
-        }
-
+        /* ----- RESET & VARIABLES ----- */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        html {
-            scroll-behavior: smooth;
+        :root {
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --secondary: #7209b7;
+            --accent: #f72585;
+            --dark: #0b132b;
+            --dark-soft: #1c2541;
+            --gray: #6c757d;
+            --gray-light: #f8f9fa;
+            --light: #ffffff;
+            --shadow: 0 10px 30px rgba(0,0,0,0.08);
+            --shadow-hover: 0 20px 40px rgba(0,0,0,0.12);
+            --border-radius: 12px;
+            --transition: all 0.3s ease;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
             color: var(--dark);
+            line-height: 1.5;
             background-color: var(--light);
             overflow-x: hidden;
         }
@@ -56,47 +46,18 @@
             margin-bottom: 1rem;
         }
 
-        h1 {
-            font-size: 3.5rem;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            position: relative;
-            display: inline-block;
-        }
-
-        h3 {
-            font-size: 1.5rem;
-        }
-
-        p {
-            margin-bottom: 1rem;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
+        h1 { font-size: 3.5rem; letter-spacing: -0.02em; }
+        h2 { font-size: 2.5rem; letter-spacing: -0.01em; }
+        h3 { font-size: 1.5rem; }
+        p { margin-bottom: 1rem; color: var(--gray); }
 
         .container {
-            width: 100%;
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
             padding: 0 2rem;
         }
 
-        .section {
+        section {
             padding: 5rem 0;
         }
 
@@ -104,1468 +65,405 @@
             text-align: center;
             margin-bottom: 3rem;
         }
-
         .section-title h2 {
             margin-bottom: 1rem;
         }
-
         .section-title p {
-            color: var(--secondary);
-            max-width: 700px;
+            max-width: 650px;
             margin: 0 auto;
+            font-size: 1.1rem;
         }
 
+        /* Buttons */
         .btn {
-            display: inline-block;
-            padding: 0.8rem 2rem;
-            background-color: var(--primary);
-            color: var(--light);
-            border-radius: var(--border-radius);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.85rem 2rem;
             font-weight: 600;
-            cursor: pointer;
+            border-radius: 50px;
             transition: var(--transition);
-            border: 2px solid transparent;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
         }
-
+        .btn i { font-size: 1rem; }
         .btn:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-3px);
+            background: var(--primary-dark);
+            transform: translateY(-2px);
             box-shadow: var(--shadow);
         }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--primary);
+        .btn-outline {
+            background: transparent;
             border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
         }
 
-        .btn-secondary:hover {
-            background-color: rgba(74, 108, 247, 0.1);
-        }
-
+        /* Cards */
         .card {
-            background-color: var(--light);
+            background: white;
             border-radius: var(--border-radius);
             padding: 2rem;
             box-shadow: var(--shadow);
             transition: var(--transition);
             height: 100%;
         }
-
         .card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-lg);
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-hover);
         }
 
-        /* ===== HEADER & NAVIGATION ===== */
+        /* Header */
         header {
             position: fixed;
             top: 0;
-            left: 0;
             width: 100%;
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(12px);
             z-index: 1000;
-            background-color: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: var(--transition);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
         }
-
         .header-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.2rem 2rem;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
         }
-
         .logo {
-            display: flex;
-            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
-
-        .logo-img {
-            height: 50px;
-            width: auto;
-            transition: var(--transition);
-        }
-
-        .logo-img:hover {
-            transform: scale(1.05);
-        }
-
         .nav-menu {
             display: flex;
             gap: 2rem;
+            align-items: center;
         }
-
         .nav-link {
+            text-decoration: none;
             font-weight: 600;
-            position: relative;
-            padding: 0.5rem 0;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--primary);
+            color: var(--dark);
             transition: var(--transition);
         }
-
-        .nav-link:hover::after,
-        .nav-link.active::after {
-            width: 100%;
-        }
-
-        .nav-link:hover,
-        .nav-link.active {
-            color: var(--primary);
-        }
-
+        .nav-link:hover { color: var(--primary); }
         .mobile-toggle {
             display: none;
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             cursor: pointer;
-            color: var(--dark);
         }
 
-        /* ===== HERO SECTION ===== */
+        /* Hero */
         .hero {
             padding: 10rem 0 5rem;
-            background: linear-gradient(135deg, #f5f7ff 0%, #eef1ff 100%);
-            position: relative;
-            overflow: hidden;
+            background: linear-gradient(135deg, #f5f7ff 0%, #e9ecef 100%);
         }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            background: url("data:image/svg+xml,%3Csvg width='400' height='400' viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h400v400H0V0zm50 50h300v300H50V50z' fill='%234a6cf7' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
-            opacity: 0.5;
-        }
-
-        .hero-container {
+        .hero-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-content h1 {
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-content p {
-            font-size: 1.2rem;
-            color: var(--secondary);
-            margin-bottom: 2.5rem;
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 3rem;
-        }
-
-        .hero-stats {
-            display: flex;
             gap: 3rem;
-        }
-
-        .stat-item {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            line-height: 1;
-        }
-
-        .stat-text {
-            font-size: 0.9rem;
-            color: var(--secondary);
-            margin-top: 0.5rem;
-        }
-
-        .hero-visual {
-            position: relative;
-        }
-
-        .visual-placeholder {
-            background: linear-gradient(135deg, var(--primary), #6a11cb);
-            border-radius: 20px;
-            padding: 2rem;
-            color: white;
-            height: 350px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
             align-items: center;
-            box-shadow: var(--shadow-lg);
-            position: relative;
-            overflow: hidden;
         }
-
-        .visual-placeholder::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
-            background-size: 20px 20px;
-            animation: float 20s linear infinite;
-        }
-
-        @keyframes float {
-            0% {
-                transform: translate(0, 0) rotate(0deg);
-            }
-            100% {
-                transform: translate(-20px, -20px) rotate(360deg);
-            }
-        }
-
-        .ai-elements {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
+        .hero-buttons {
+            display: flex;
             gap: 1rem;
-            width: 100%;
+            margin: 2rem 0;
+            flex-wrap: wrap;
         }
-
-        .ai-element {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            padding: 1rem;
+        .stats {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .stat h3 { font-size: 2rem; color: var(--primary); margin-bottom: 0; }
+        .hero-image {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            border-radius: 30px;
+            padding: 2rem;
             text-align: center;
-            backdrop-filter: blur(10px);
+            color: white;
+            box-shadow: var(--shadow-hover);
         }
+        .hero-image i { font-size: 4rem; margin: 1rem; }
 
-        /* ===== COURSES SECTION ===== */
-        .services {
-            background-color: var(--gray-light);
-        }
-
+        /* Services Grid */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
-
         .service-icon {
             font-size: 2.5rem;
-            margin-bottom: 1.5rem;
             color: var(--primary);
-        }
-
-        .service-card h3 {
             margin-bottom: 1rem;
         }
 
-        .service-features {
-            margin-top: 1.5rem;
+        /* About / Tech Stack */
+        .tech-badge {
+            display: inline-block;
+            background: #eef2ff;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 500;
+            margin: 0.25rem;
         }
 
-        .service-features li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .service-features li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--success);
-            font-weight: bold;
-        }
-
-        /* ===== AUDIENCE SECTION ===== */
-        .industries-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-        }
-
-        .industry-icon {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-
-        /* ===== CURRICULUM SECTION ===== */
-        .capabilities {
-            background-color: var(--gray-light);
-        }
-
-        .capabilities-grid {
+        /* Projects */
+        .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
-
-        .capability-item {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .capability-icon {
-            font-size: 3rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary);
-        }
-
-        /* ===== PROGRAMS SECTION ===== */
-        .careers-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .job-card {
-            border-left: 4px solid var(--primary);
-        }
-
-        .job-details {
-            margin-top: 1rem;
-        }
-
-        .job-details li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
-        }
-
-        .job-details li::before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: var(--primary);
-        }
-
-        /* ===== WHY CHOOSE US SECTION ===== */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .feature-card {
-            text-align: center;
-            padding: 2rem;
-        }
-
-        .feature-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-
-        /* ===== INSTRUCTORS SECTION ===== */
-        .instructors-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
-        }
-
-        .instructor-card {
-            text-align: center;
-        }
-
-        .instructor-img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background-color: var(--gray);
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--primary);
-            border: 4px solid var(--primary);
-        }
-
-        .instructor-name {
-            margin-bottom: 0.5rem;
-        }
-
-        .instructor-title {
-            color: var(--primary);
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        /* ===== CERTIFICATION SECTION ===== */
-        .cert-path {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .path-item {
-            text-align: center;
-            padding: 2rem;
-            background: var(--light);
-            border-radius: var(--border-radius);
+        .project-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
             box-shadow: var(--shadow);
         }
+        .project-content { padding: 1.5rem; }
 
-        .path-icon {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-
-        /* ===== CONTACT SECTION ===== */
+        /* Contact */
         .contact {
-            background-color: var(--dark);
-            color: var(--light);
+            background: var(--dark-soft);
+            color: white;
         }
-
-        .contact .section-title h2,
-        .contact .section-title p {
-            color: var(--light);
-        }
-
-        .contact-container {
+        .contact .section-title p { color: #ccc; }
+        .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 3rem;
         }
-
-        .contact-info h3 {
-            margin-bottom: 2rem;
-        }
-
-        .contact-details {
-            margin-top: 2rem;
-        }
-
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-
+        .contact-info { display: flex; flex-direction: column; gap: 1.5rem; }
+        .contact-item { display: flex; align-items: center; gap: 1rem; }
         .contact-icon {
-            font-size: 1.2rem;
-            color: var(--primary);
-            margin-right: 1rem;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
+            font-size: 1.4rem;
         }
-
-        .contact-form {
-            background-color: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: var(--border-radius);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
-        }
-
-        .form-control {
+        input, textarea {
             width: 100%;
-            padding: 0.8rem 1rem;
-            border-radius: var(--border-radius);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            background-color: rgba(255, 255, 255, 0.05);
-            color: var(--light);
-            font-family: inherit;
-            transition: var(--transition);
-        }
-
-        .form-control:focus {
-            outline: none;
-            border-color: var(--primary);
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
-        .form-submit {
-            background-color: var(--primary);
-            color: var(--light);
+            padding: 1rem;
+            border-radius: 12px;
             border: none;
-            width: 100%;
-            padding: 1rem;
-            font-size: 1rem;
-            font-weight: 600;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .form-submit:hover {
-            background-color: var(--primary-dark);
-        }
-
-        .success-message {
-            display: none;
-            background-color: rgba(40, 167, 69, 0.2);
-            border: 1px solid var(--success);
-            color: var(--success);
-            padding: 1rem;
-            border-radius: var(--border-radius);
-            margin-top: 1rem;
-            text-align: center;
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background-color: #111;
-            color: var(--light);
-            padding: 3rem 0 1.5rem;
-        }
-
-        .footer-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-logo-img {
-            height: 40px;
-            width: auto;
             margin-bottom: 1rem;
-            transition: var(--transition);
+            font-family: inherit;
         }
-
-        .footer-logo-img:hover {
-            opacity: 0.9;
-        }
-
-        .footer-about p {
-            color: rgba(255, 255, 255, 0.7);
-        }
-
-        .footer-links h4,
-        .footer-contact h4 {
-            margin-bottom: 1.5rem;
-            font-size: 1.2rem;
-        }
-
-        .footer-links ul li {
-            margin-bottom: 0.8rem;
-        }
-
-        .footer-links ul li a:hover {
-            color: var(--primary);
-        }
-
-        .footer-contact p {
-            color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 0.5rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-            margin-top: 1.5rem;
-        }
-
-        .social-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            transition: var(--transition);
-        }
-
-        .social-link:hover {
-            background-color: var(--primary);
-            transform: translateY(-3px);
-        }
-
-        .copyright {
+        footer {
+            background: #0a0f1c;
+            color: #aaa;
+            padding: 3rem 0 2rem;
             text-align: center;
-            padding-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 0.9rem;
         }
 
-        /* ===== RESPONSIVE DESIGN ===== */
-        @media (max-width: 992px) {
-            h1 {
-                font-size: 2.8rem;
-            }
-            
-            h2 {
-                font-size: 2.2rem;
-            }
-            
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-            }
-            
-            .hero-content {
-                text-align: center;
-            }
-            
-            .hero-btns {
-                justify-content: center;
-            }
-            
-            .hero-stats {
-                justify-content: center;
-            }
-        }
-
+        /* Mobile */
         @media (max-width: 768px) {
-            .header-container {
-                padding: 1rem;
-            }
-            
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+            .hero-grid { grid-template-columns: 1fr; text-align: center; }
+            .hero-buttons { justify-content: center; }
+            .stats { justify-content: center; }
             .nav-menu {
                 position: fixed;
                 top: 70px;
                 left: -100%;
                 width: 100%;
+                background: white;
                 flex-direction: column;
-                background-color: var(--light);
-                text-align: center;
-                padding: 2rem 0;
-                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-                transition: var(--transition);
-                z-index: 999;
+                padding: 2rem;
+                box-shadow: 0 20px 30px rgba(0,0,0,0.1);
+                transition: 0.3s;
             }
-            
-            .nav-menu.active {
-                left: 0;
-            }
-            
-            .nav-link {
-                padding: 1rem;
-            }
-            
-            .mobile-toggle {
-                display: block;
-            }
-            
-            .hero {
-                padding: 8rem 0 3rem;
-            }
-            
-            .hero-btns {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .btn {
-                width: 100%;
-                max-width: 300px;
-                text-align: center;
-            }
-            
-            .hero-stats {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .logo-img {
-                height: 40px;
-            }
-            
-            .footer-logo-img {
-                height: 35px;
-            }
-            
-            .section {
-                padding: 3rem 0;
-            }
-        }
-
-        @media (max-width: 480px) {
-            h1 {
-                font-size: 2.2rem;
-            }
-            
-            h2 {
-                font-size: 1.8rem;
-            }
-            
-            .container {
-                padding: 0 1rem;
-            }
-            
-            .card {
-                padding: 1.5rem;
-            }
-            
-            .hero-stats {
-                gap: 1.5rem;
-            }
-            
-            .logo-img {
-                height: 35px;
-            }
+            .nav-menu.active { left: 0; }
+            .mobile-toggle { display: block; }
+            .container { padding: 0 1.5rem; }
+            section { padding: 3rem 0; }
         }
     </style>
 </head>
 <body>
-    <!-- ===== HEADER & NAVIGATION ===== -->
-    <header id="header">
-        <div class="header-container container">
-            <div class="logo">
-                <a href="#home">
-                    <img src="./logo.png" alt="Logikwerk" class="logo-img" onerror="this.src='https://raw.githubusercontent.com/YOUR-USERNAME/YOUR-REPO/main/logo.png'">
-                </a>
-            </div>
-            
-            <div class="mobile-toggle" id="mobile-toggle">
-                <i class="fas fa-bars"></i>
-            </div>
-            
-            <nav class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#services" class="nav-link">Courses</a>
-                <a href="#industries" class="nav-link">Audience</a>
-                <a href="#capabilities" class="nav-link">Curriculum</a>
-                <a href="#careers" class="nav-link">Programs</a>
-                <a href="#why-us" class="nav-link">Why Us</a>
-                <a href="#instructors" class="nav-link">Instructors</a>
-                <a href="#contact" class="nav-link btn">Enroll Now</a>
-            </nav>
-        </div>
-    </header>
 
-    <!-- ===== HERO SECTION ===== -->
-    <section class="hero" id="home">
-        <div class="hero-container container">
-            <div class="hero-content">
-                <h1>Enterprise-Grade Generative AI Training</h1>
-                <p>Logikwerk delivers comprehensive, hands-on training programs designed for organizations and professionals seeking to master generative AI technologies. Our curriculum bridges theory and real-world application.</p>
-                
-                <div class="hero-btns">
-                    <a href="#services" class="btn">Explore Courses</a>
-                    <a href="#contact" class="btn btn-secondary">Request Brochure</a>
+<header>
+    <div class="header-container">
+        <div class="logo">Nexify</div>
+        <div class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></div>
+        <nav class="nav-menu" id="navMenu">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="#services" class="nav-link">Services</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+            <a href="#contact" class="btn" style="padding: 0.5rem 1.2rem;">Get Quote</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-grid">
+            <div>
+                <h1>Future-ready IT solutions for modern enterprises</h1>
+                <p>We build scalable software, AI integrations, cloud platforms, and digital experiences that drive real business growth.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn"><i class="fas fa-rocket"></i> Start a project</a>
+                    <a href="#services" class="btn btn-outline">Explore services</a>
                 </div>
-                
-                <div class="hero-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-text">Expert-Led Courses</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">2,500+</div>
-                        <div class="stat-text">Professionals Trained</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">4.9/5</div>
-                        <div class="stat-text">Post-Training Satisfaction</div>
-                    </div>
+                <div class="stats">
+                    <div class="stat"><h3>150+</h3><p>Projects delivered</p></div>
+                    <div class="stat"><h3>98%</h3><p>Client retention</p></div>
+                    <div class="stat"><h3>45+</h3><p>Expert engineers</p></div>
                 </div>
             </div>
-            
-            <div class="hero-visual">
-                <div class="visual-placeholder">
-                    <h3 style="margin-bottom: 1.5rem; color: white;">Comprehensive Learning Path</h3>
-                    <div class="ai-elements">
-                        <div class="ai-element">
-                            <i class="fas fa-comment-dots"></i>
-                            <p>LLMs & NLP</p>
-                        </div>
-                        <div class="ai-element">
-                            <i class="fas fa-image"></i>
-                            <p>Image Generation</p>
-                        </div>
-                        <div class="ai-element">
-                            <i class="fas fa-code"></i>
-                            <p>Prompt Engineering</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="hero-image">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <i class="fas fa-microchip"></i>
+                <i class="fas fa-database"></i>
+                <h3 style="margin-top: 1rem;">Innovation meets execution</h3>
+                <p style="color: #e0e0e0;">End-to-end IT partner</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===== COURSES SECTION ===== -->
-    <section class="section services" id="services">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Courses</h2>
-                <p>In-depth, practical training across the generative AI landscape.</p>
-            </div>
-            
-            <div class="services-grid">
-                <div class="service-card card">
-                    <div class="service-icon">🤖</div>
-                    <h3>Generative AI Fundamentals</h3>
-                    <p>Build a solid foundation in generative AI concepts, models, and tools. Ideal for beginners and cross-functional teams.</p>
-                    <ul class="service-features">
-                        <li>Introduction to LLMs & transformer architecture</li>
-                        <li>Prompt engineering basics & best practices</li>
-                        <li>Ethics, bias, and responsible AI</li>
-                        <li>Hands-on with ChatGPT, Claude, and Gemini</li>
-                        <li>Capstone: Build a simple AI assistant</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card card">
-                    <div class="service-icon">⚡</div>
-                    <h3>Advanced Prompt Engineering</h3>
-                    <p>Master techniques to elicit precise, high-quality outputs from generative models for complex tasks.</p>
-                    <ul class="service-features">
-                        <li>Chain-of-thought & few-shot prompting</li>
-                        <li>Prompt chaining and decomposition</li>
-                        <li>Role-based and persona prompting</li>
-                        <li>Automated prompt optimization</li>
-                        <li>Real-world case studies (code generation, analysis)</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card card">
-                    <div class="service-icon">🔧</div>
-                    <h3>Fine-Tuning & Deployment</h3>
-                    <p>Learn to customize open-source models and deploy them in production environments.</p>
-                    <ul class="service-features">
-                        <li>Fine-tuning LLaMA, Mistral, and Phi</li>
-                        <li>Parameter-efficient fine-tuning (LoRA, QLoRA)</li>
-                        <li>RLHF fundamentals and preference tuning</li>
-                        <li>Model quantization and optimization</li>
-                        <li>Deployment with Hugging Face, vLLM, and cloud APIs</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card card">
-                    <div class="service-icon">🎨</div>
-                    <h3>Generative AI for Creatives</h3>
-                    <p>Harness AI for image, video, audio, and 3D content generation. Perfect for creative teams and content producers.</p>
-                    <ul class="service-features">
-                        <li>Image generation (Stable Diffusion, DALL·E, Midjourney)</li>
-                        <li>Video synthesis (Runway, Pika, Sora)</li>
-                        <li>Audio and music generation</li>
-                        <li>3D model generation</li>
-                        <li>Workflow integration and prompt crafting for creatives</li>
-                    </ul>
-                </div>
+<!-- Services -->
+<section id="services">
+    <div class="container">
+        <div class="section-title">
+            <h2>Core IT services</h2>
+            <p>We help businesses scale with modern technology stacks and agile delivery.</p>
+        </div>
+        <div class="services-grid">
+            <div class="card"><div class="service-icon"><i class="fas fa-laptop-code"></i></div><h3>Custom software dev</h3><p>Web, mobile, desktop – tailored to your workflows.</p></div>
+            <div class="card"><div class="service-icon"><i class="fas fa-cloud"></i></div><h3>Cloud & DevOps</h3><p>AWS, Azure, GCP – CI/CD, Kubernetes, serverless.</p></div>
+            <div class="card"><div class="service-icon"><i class="fas fa-brain"></i></div><h3>AI & automation</h3><p>LLM integration, RAG, intelligent process automation.</p></div>
+            <div class="card"><div class="service-icon"><i class="fas fa-chart-line"></i></div><h3>Data analytics</h3><p>BI dashboards, data warehousing, real-time insights.</p></div>
+            <div class="card"><div class="service-icon"><i class="fas fa-shield-alt"></i></div><h3>Cybersecurity</h3><p>Risk assessment, compliance, zero-trust architecture.</p></div>
+            <div class="card"><div class="service-icon"><i class="fas fa-headset"></i></div><h3>IT consulting</h3><p>Digital transformation strategy and tech advisory.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- About + tech stack -->
+<section id="about" style="background: #f8fafc;">
+    <div class="container">
+        <div class="section-title">
+            <h2>Who we are</h2>
+            <p>We're a team of engineers, designers, and strategists committed to delivering impact.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem;">
+            <div class="card"><i class="fas fa-eye" style="font-size: 2rem; color: var(--primary);"></i><h3>Our mission</h3><p>Democratize cutting-edge IT for mid-market and enterprise clients through agile, secure, and scalable solutions.</p></div>
+            <div class="card"><i class="fas fa-chart-simple" style="font-size: 2rem; color: var(--primary);"></i><h3>Our approach</h3><p>We combine design thinking with modern engineering to produce high-quality, maintainable systems.</p></div>
+        </div>
+        <div style="margin-top: 3rem; text-align: center;">
+            <h3>Tech stack expertise</h3>
+            <div style="margin-top: 1rem;">
+                <span class="tech-badge">React / Next.js</span>
+                <span class="tech-badge">Node.js / Python</span>
+                <span class="tech-badge">AWS / Azure</span>
+                <span class="tech-badge">Kubernetes</span>
+                <span class="tech-badge">TensorFlow / PyTorch</span>
+                <span class="tech-badge">Django / FastAPI</span>
+                <span class="tech-badge">PostgreSQL / MongoDB</span>
+                <span class="tech-badge">Docker / Terraform</span>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===== AUDIENCE SECTION ===== -->
-    <section class="section" id="industries">
-        <div class="container">
-            <div class="section-title">
-                <h2>Who Should Attend</h2>
-                <p>Our programs are tailored for diverse roles and industries.</p>
+<!-- Projects -->
+<section id="projects">
+    <div class="container">
+        <div class="section-title">
+            <h2>Recent projects</h2>
+            <p>Real solutions, real results.</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card"><div class="project-content"><i class="fas fa-chart-line" style="font-size: 2rem; color: var(--primary);"></i><h3>Fintech analytics hub</h3><p>Real-time dashboards for a leading investment firm – 40% faster reporting.</p></div></div>
+            <div class="project-card"><div class="project-content"><i class="fas fa-robot" style="font-size: 2rem; color: var(--primary);"></i><h3>AI customer support agent</h3><p>Generative AI chatbot that reduced ticket volume by 55% for an e-commerce brand.</p></div></div>
+            <div class="project-card"><div class="project-content"><i class="fas fa-cloud-upload-alt" style="font-size: 2rem; color: var(--primary);"></i><h3>Cloud migration (healthcare)</h3><p>Migrated legacy systems to AWS, achieving 99.99% uptime and HIPAA compliance.</p></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="section-title">
+            <h2 style="color: white;">Let's talk</h2>
+            <p>Ready to build something great? Reach out to our team.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><h4>Email us</h4><p>hello@nexify.com</p></div></div>
+                <div class="contact-item"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div><h4>Call us</h4><p>+91 98765 43210</p></div></div>
+                <div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>Visit</h4><p>Hyderabad, India / Singapore</p></div></div>
             </div>
-            
-            <div class="industries-grid">
-                <div class="card">
-                    <div class="industry-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Software Developers</h3>
-                    <p>Integrate generative AI into applications using APIs, SDKs, and open-source models. Learn to build AI-powered features and products.</p>
-                </div>
-                
-                <div class="card">
-                    <div class="industry-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>Data Scientists & ML Engineers</h3>
-                    <p>Deepen your understanding of model architecture, fine-tuning, evaluation, and deployment. Gain hands-on experience with cutting-edge techniques.</p>
-                </div>
-                
-                <div class="card">
-                    <div class="industry-icon">
-                        <i class="fas fa-briefcase"></i>
-                    </div>
-                    <h3>Product Managers & Business Leaders</h3>
-                    <p>Understand capabilities, limitations, and strategic implementation of generative AI. Identify use cases and drive AI adoption in your organization.</p>
-                </div>
-                
-                <div class="card">
-                    <div class="industry-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Content Creators & Designers</h3>
-                    <p>Leverage AI tools to accelerate creative workflows, generate unique content, and explore new forms of expression.</p>
-                </div>
-                
-                <div class="card">
-                    <div class="industry-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Risk & Compliance Professionals</h3>
-                    <p>Learn about AI governance, bias mitigation, and regulatory considerations to ensure responsible AI deployment.</p>
-                </div>
-                
-                <div class="card">
-                    <div class="industry-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>Academics & Researchers</h3>
-                    <p>Stay current with the latest advancements in generative AI and apply them to research or teaching.</p>
-                </div>
+            <div>
+                <form id="contactForm">
+                    <input type="text" placeholder="Full name" id="name" required>
+                    <input type="email" placeholder="Email address" id="email" required>
+                    <input type="text" placeholder="Company name">
+                    <textarea rows="4" placeholder="Tell us about your project..." id="msg"></textarea>
+                    <button type="submit" class="btn" style="width: 100%; justify-content: center;"><i class="fas fa-paper-plane"></i> Send message</button>
+                    <div id="formSuccess" style="margin-top: 1rem; color: #28a745; display: none;">✓ Thanks! We'll get back within 24h.</div>
+                </form>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- ===== CURRICULUM SECTION ===== -->
-    <section class="section capabilities" id="capabilities">
-        <div class="container">
-            <div class="section-title">
-                <h2>Comprehensive Curriculum</h2>
-                <p>Key topics covered across our training programs.</p>
-            </div>
-            
-            <div class="capabilities-grid">
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <i class="fas fa-language"></i>
-                    </div>
-                    <h3>Large Language Models (LLMs)</h3>
-                    <p>Architecture, training, fine-tuning, and applications of models like GPT, LLaMA, Claude, Gemini, and Mistral.</p>
-                </div>
-                
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <i class="fas fa-image"></i>
-                    </div>
-                    <h3>Image & Video Generation</h3>
-                    <p>Diffusion models (Stable Diffusion, DALL·E 2/3), GANs, and emerging video generation techniques.</p>
-                </div>
-                
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <i class="fas fa-pen"></i>
-                    </div>
-                    <h3>Prompt Engineering</h3>
-                    <p>Crafting effective prompts, iterative refinement, advanced strategies, and evaluation metrics.</p>
-                </div>
-                
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <i class="fas fa-sliders-h"></i>
-                    </div>
-                    <h3>Model Fine-Tuning</h3>
-                    <p>Full fine-tuning, parameter-efficient methods, instruction tuning, and alignment techniques.</p>
-                </div>
-                
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h3>AI Ethics & Safety</h3>
-                    <p>Bias detection and mitigation, fairness, transparency, and responsible AI frameworks.</p>
-                </div>
-                
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <i class="fas fa-cloud-upload-alt"></i>
-                    </div>
-                    <h3>Deployment & Scaling</h3>
-                    <p>Serving models via APIs, containerization, orchestration, and monitoring in production.</p>
-                </div>
-                
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>Retrieval-Augmented Generation (RAG)</h3>
-                    <p>Building knowledge-augmented systems with vector databases and external data sources.</p>
-                </div>
-                
-                <div class="capability-item">
-                    <div class="capability-icon">
-                        <i class="fas fa-microchip"></i>
-                    </div>
-                    <h3>AI Agents & Tool Use</h3>
-                    <p>Creating autonomous agents that can reason, plan, and use tools to accomplish tasks.</p>
-                </div>
-            </div>
+<footer>
+    <div class="container">
+        <div class="logo" style="margin-bottom: 1rem;">Nexify</div>
+        <p>© 2025 Nexify Technologies — IT consulting & digital engineering</p>
+        <div style="margin-top: 1rem;">
+            <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-github"></i></a>
+            <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-twitter"></i></a>
         </div>
-    </section>
+    </div>
+</footer>
 
-    <!-- ===== PROGRAMS SECTION ===== -->
-    <section class="section" id="careers">
-        <div class="container">
-            <div class="section-title">
-                <h2>Training Programs & Batches</h2>
-                <p>Structured learning paths with flexible schedules.</p>
-            </div>
-            
-            <div class="careers-container">
-                <div class="job-card card">
-                    <h3>Certified Generative AI Developer</h3>
-                    <p><strong>Duration:</strong> 8 weeks (online, live instructor-led)</p>
-                    <p><strong>Next batch:</strong> June 15, 2026</p>
-                    <p><strong>Schedule:</strong> Tue/Thu 6:30–9:30 PM IST</p>
-                    <ul class="job-details">
-                        <li>40+ hours of live instruction</li>
-                        <li>5 hands-on projects</li>
-                        <li>Capstone: Build a production-ready AI app</li>
-                        <li>1-on-1 mentorship sessions</li>
-                        <li>Course fee: ₹85,000 + GST</li>
-                    </ul>
-                    <a href="#contact" class="btn" style="margin-top: 1rem;">Enroll Now</a>
-                </div>
-                
-                <div class="job-card card">
-                    <h3>Generative AI for Business Leaders</h3>
-                    <p><strong>Duration:</strong> 2-day intensive workshop</p>
-                    <p><strong>Next batch:</strong> July 8–9, 2026</p>
-                    <p><strong>Format:</strong> Online or In-person (Hyderabad)</p>
-                    <ul class="job-details">
-                        <li>Strategic overview of gen AI capabilities</li>
-                        <li>Use case identification & prioritization</li>
-                        <li>Risk management & governance</li>
-                        <li>Vendor selection & implementation roadmap</li>
-                        <li>Course fee: ₹45,000 + GST</li>
-                    </ul>
-                    <a href="#contact" class="btn" style="margin-top: 1rem;">Enroll Now</a>
-                </div>
-                
-                <div class="job-card card">
-                    <h3>Hands-on Prompt Engineering Bootcamp</h3>
-                    <p><strong>Duration:</strong> 4 weeks (online)</p>
-                    <p><strong>Next batch:</strong> June 22, 2026</p>
-                    <p><strong>Schedule:</strong> Mon/Wed 7:00–9:30 PM IST</p>
-                    <ul class="job-details">
-                        <li>20+ hours of interactive sessions</li>
-                        <li>Real-world exercises & assignments</li>
-                        <li>Access to proprietary prompt library</li>
-                        <li>Certificate of completion</li>
-                        <li>Course fee: ₹35,000 + GST</li>
-                    </ul>
-                    <a href="#contact" class="btn" style="margin-top: 1rem;">Enroll Now</a>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 3rem;">
-                <p><strong>All programs include:</strong> Expert mentorship, hands-on labs, lifetime access to materials, and alumni network.</p>
-                <p><em>Corporate group discounts available. Contact us for custom programs.</em></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== WHY CHOOSE US SECTION ===== -->
-    <section class="section" id="why-us">
-        <div class="container">
-            <div class="section-title">
-                <h2>Why Logikwerk</h2>
-                <p>What sets our training apart.</p>
-            </div>
-            
-            <div class="features-grid">
-                <div class="feature-card card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
-                    <h3>Industry Experts as Instructors</h3>
-                    <p>Learn from practitioners with years of experience building and deploying AI solutions at scale.</p>
-                </div>
-                
-                <div class="feature-card card">
-                    <div class="feature-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h3>Project-Based Learning</h3>
-                    <p>Each course includes real-world projects that simulate actual industry challenges.</p>
-                </div>
-                
-                <div class="feature-card card">
-                    <div class="feature-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h3>Curriculum Continuously Updated</h3>
-                    <p>We keep pace with the rapidly evolving AI landscape—our materials are refreshed every quarter.</p>
-                </div>
-                
-                <div class="feature-card card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Corporate Training</h3>
-                    <p>Tailored programs for teams, with flexible delivery options and customized content.</p>
-                </div>
-                
-                <div class="feature-card card">
-                    <div class="feature-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Recognized Certification</h3>
-                    <p>Earn a verifiable certificate that demonstrates your expertise to employers.</p>
-                </div>
-                
-                <div class="feature-card card">
-                    <div class="feature-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>Post-Training Support</h3>
-                    <p>Access to alumni community, Q&A forums, and periodic refresher sessions.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== INSTRUCTORS SECTION ===== -->
-    <section class="section" id="instructors">
-        <div class="container">
-            <div class="section-title">
-                <h2>Meet Your Instructors</h2>
-                <p>Learn from seasoned AI practitioners and researchers.</p>
-            </div>
-            
-            <div class="instructors-grid">
-                <div class="instructor-card card">
-                    <div class="instructor-img">
-                        <i class="fas fa-user-tie"></i>
-                    </div>
-                    <h3 class="instructor-name">Dr. Arjun Mehta</h3>
-                    <p class="instructor-title">Chief AI Scientist</p>
-                    <p>PhD in Machine Learning, 15+ years in NLP and generative models. Previously led AI teams at Google Research and IBM.</p>
-                </div>
-                
-                <div class="instructor-card card">
-                    <div class="instructor-img">
-                        <i class="fas fa-user-circle"></i>
-                    </div>
-                    <h3 class="instructor-name">Priya Srinivasan</h3>
-                    <p class="instructor-title">Senior AI Architect</p>
-                    <p>Expert in LLM fine-tuning and deployment. 10+ years experience building production AI systems for Fortune 500 companies.</p>
-                </div>
-                
-                <div class="instructor-card card">
-                    <div class="instructor-img">
-                        <i class="fas fa-user-graduate"></i>
-                    </div>
-                    <h3 class="instructor-name">Rahul Kapoor</h3>
-                    <p class="instructor-title">Generative AI Engineer</p>
-                    <p>Specializes in prompt engineering and AI agents. Previously built AI solutions at Microsoft and a stealth startup.</p>
-                </div>
-                
-                <div class="instructor-card card">
-                    <div class="instructor-img">
-                        <i class="fas fa-user-astronaut"></i>
-                    </div>
-                    <h3 class="instructor-name">Dr. Sneha Pillai</h3>
-                    <p class="instructor-title">AI Ethics & Governance Lead</p>
-                    <p>PhD in Responsible AI, advisor to multiple AI ethics boards. Helps organizations deploy AI safely and fairly.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== CERTIFICATION & LEARNING PATHS SECTION ===== -->
-    <section class="section" style="background-color: var(--gray-light);">
-        <div class="container">
-            <div class="section-title">
-                <h2>Certification & Learning Paths</h2>
-                <p>Choose your journey and earn industry-recognized credentials.</p>
-            </div>
-            
-            <div class="cert-path">
-                <div class="path-item">
-                    <div class="path-icon">
-                        <i class="fas fa-road"></i>
-                    </div>
-                    <h3>Foundational Path</h3>
-                    <p>Generative AI Fundamentals + Prompt Engineering Bootcamp</p>
-                    <p><strong>Duration:</strong> 12 weeks</p>
-                    <p><strong>Certification:</strong> Logikwerk Certified AI Practitioner</p>
-                </div>
-                
-                <div class="path-item">
-                    <div class="path-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
-                    <h3>Technical Path</h3>
-                    <p>All three technical courses + Capstone Project</p>
-                    <p><strong>Duration:</strong> 20 weeks</p>
-                    <p><strong>Certification:</strong> Logikwerk Certified Generative AI Developer</p>
-                </div>
-                
-                <div class="path-item">
-                    <div class="path-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>Leadership Path</h3>
-                    <p>Business Leaders Workshop + AI Ethics & Governance modules</p>
-                    <p><strong>Duration:</strong> 3 days</p>
-                    <p><strong>Certification:</strong> Logikwerk Certified AI Strategist</p>
-                </div>
-                
-                <div class="path-item">
-                    <div class="path-icon">
-                        <i class="fas fa-paint-brush"></i>
-                    </div>
-                    <h3>Creative Path</h3>
-                    <p>Generative AI for Creatives + Advanced Prompt Engineering</p>
-                    <p><strong>Duration:</strong> 8 weeks</p>
-                    <p><strong>Certification:</strong> Logikwerk Certified Creative AI Specialist</p>
-                </div>
-            </div>
-            
-            <div style="text-align: center; margin-top: 3rem;">
-                <a href="#contact" class="btn">Speak with a Learning Advisor</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== CONTACT SECTION ===== -->
-    <section class="section contact" id="contact">
-        <div class="container">
-            <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>Have questions? Ready to enroll? Get in touch with our training team.</p>
-            </div>
-            
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Logikwerk Private Limited</h3>
-                    <p>Enterprise Generative AI Training & Solutions</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div>
-                                <p><strong>Email</strong></p>
-                                <p>training@logikwerk.in</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div>
-                                <p><strong>Office Address</strong></p>
-                                <p>SY NO.12, Acendia Ark, White Field Rd, Kondapur, Hyderabad, Telangana 500019</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-clock"></i>
-                            </div>
-                            <div>
-                                <p><strong>Business Hours</strong></p>
-                                <p>Monday – Friday<br>9:30 AM – 6:30 PM IST</p>
-                            </div>
-                        </div>
-                        
-                        <div class="contact-item">
-                            <div class="contact-icon">
-                                <i class="fas fa-phone-alt"></i>
-                            </div>
-                            <div>
-                                <p><strong>Phone</strong></p>
-                                <p>+91 40 1234 5678</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" class="form-control" required>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control" required placeholder="Tell us about your training interests, preferred program, or any questions..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="form-submit">Send Message</button>
-                        
-                        <div class="success-message" id="successMessage">
-                            ✅ Thank you! Your message has been sent successfully. We will contact you shortly.
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-about">
-                    <img src="./logo.png" alt="Logikwerk" class="footer-logo-img" onerror="this.style.display='none'">
-                    <p>Logikwerk Private Limited is a technology company specializing in Generative AI training and solutions. We equip professionals and organizations with the skills to harness the power of AI responsibly and effectively.</p>
-                    
-                    <div class="social-links">
-                        <a href="#" class="social-link">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-youtube"></i>
-                        </a>
-                    </div>
-                </div>
-                
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Courses</a></li>
-                        <li><a href="#industries">Audience</a></li>
-                        <li><a href="#capabilities">Curriculum</a></li>
-                        <li><a href="#careers">Programs</a></li>
-                        <li><a href="#why-us">Why Us</a></li>
-                        <li><a href="#instructors">Instructors</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-contact">
-                    <h4>Contact Info</h4>
-                    <p><i class="fas fa-envelope"></i> training@logikwerk.in</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Hyderabad, Telangana 500019</p>
-                    <p><i class="fas fa-clock"></i> Mon-Fri: 9:30 AM - 6:30 PM</p>
-                    <p><i class="fas fa-phone-alt"></i> +91 40 1234 5678</p>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                &copy; <span id="currentYear"></span> Logikwerk Private Limited. All rights reserved.
-            </div>
-        </div>
-    </footer>
-
-    <!-- ===== JAVASCRIPT ===== -->
-    <script>
-        // Mobile Navigation Toggle
-        const mobileToggle = document.getElementById('mobile-toggle');
-        const navMenu = document.getElementById('nav-menu');
-        
-        if (mobileToggle) {
-            mobileToggle.addEventListener('click', () => {
-                navMenu.classList.toggle('active');
-                mobileToggle.innerHTML = navMenu.classList.contains('active') 
-                    ? '<i class="fas fa-times"></i>' 
-                    : '<i class="fas fa-bars"></i>';
-            });
-        }
-        
-        // Close mobile menu when clicking a link
-        const navLinks = document.querySelectorAll('.nav-link');
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                mobileToggle.innerHTML = '<i class="fas fa-bars"></i>';
-                
-                // Update active link
-                navLinks.forEach(item => item.classList.remove('active'));
-                link.classList.add('active');
-            });
+<script>
+    // Mobile menu
+    const toggleBtn = document.getElementById('mobileToggle');
+    const nav = document.getElementById('navMenu');
+    toggleBtn?.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        toggleBtn.innerHTML = nav.classList.contains('active') ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+            if(toggleBtn) toggleBtn.innerHTML = '<i class="fas fa-bars"></i>';
         });
-        
-        // Contact Form Submission
-        const contactForm = document.getElementById('contactForm');
-        const successMessage = document.getElementById('successMessage');
-        
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                // In a real implementation, you would send form data to a server here
-                // For demo purposes, we'll just show the success message
-                successMessage.style.display = 'block';
-                
-                // Scroll to show the success message
-                successMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-                
-                // Reset form after 5 seconds
-                setTimeout(() => {
-                    contactForm.reset();
-                    successMessage.style.display = 'none';
-                }, 5000);
-            });
-        }
-        
-        // Set current year in copyright
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-        
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('header');
-            if (window.scrollY > 100) {
-                header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.1)';
-                header.style.padding = '0';
-            } else {
-                header.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-                header.style.padding = '';
-            }
-        });
-        
-        // Update active nav link based on scroll position
-        window.addEventListener('scroll', () => {
-            let current = '';
-            const sections = document.querySelectorAll('section');
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (scrollY >= (sectionTop - 200)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+    });
+
+    // Form demo
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('formSuccess');
+    form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        successMsg.style.display = 'block';
+        form.reset();
+        setTimeout(() => successMsg.style.display = 'none', 4000);
+    });
+</script>
 </body>
 </html>
