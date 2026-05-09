@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-    <title>Nexify | Enterprise IT Solutions & Digital Transformation</title>
+    <title>Logikwerk | IT Services & Generative AI Training</title>
     
-    <!-- Font Awesome 6 (Free) -->
+    <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
-        /* ----- RESET & VARIABLES ----- */
         * {
             margin: 0;
             padding: 0;
@@ -17,26 +16,26 @@
         }
 
         :root {
-            --primary: #4361ee;
-            --primary-dark: #3a56d4;
-            --secondary: #7209b7;
-            --accent: #f72585;
-            --dark: #0b132b;
-            --dark-soft: #1c2541;
+            --primary: #4a6cf7;
+            --primary-dark: #3a5ce5;
+            --secondary: #6c757d;
+            --dark: #1a1a2e;
+            --dark-soft: #16213e;
             --gray: #6c757d;
             --gray-light: #f8f9fa;
             --light: #ffffff;
-            --shadow: 0 10px 30px rgba(0,0,0,0.08);
-            --shadow-hover: 0 20px 40px rgba(0,0,0,0.12);
+            --success: #28a745;
+            --shadow: 0 5px 20px rgba(0,0,0,0.08);
+            --shadow-lg: 0 10px 30px rgba(0,0,0,0.12);
             --border-radius: 12px;
             --transition: all 0.3s ease;
         }
 
         body {
-            font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+            font-family: 'Segoe UI', 'Inter', system-ui, sans-serif;
+            line-height: 1.6;
             color: var(--dark);
-            line-height: 1.5;
-            background-color: var(--light);
+            background: var(--light);
             overflow-x: hidden;
         }
 
@@ -46,9 +45,9 @@
             margin-bottom: 1rem;
         }
 
-        h1 { font-size: 3.5rem; letter-spacing: -0.02em; }
-        h2 { font-size: 2.5rem; letter-spacing: -0.01em; }
-        h3 { font-size: 1.5rem; }
+        h1 { font-size: 3.2rem; letter-spacing: -0.02em; }
+        h2 { font-size: 2.3rem; }
+        h3 { font-size: 1.4rem; }
         p { margin-bottom: 1rem; color: var(--gray); }
 
         .container {
@@ -69,28 +68,26 @@
             margin-bottom: 1rem;
         }
         .section-title p {
-            max-width: 650px;
+            max-width: 700px;
             margin: 0 auto;
             font-size: 1.1rem;
         }
 
-        /* Buttons */
         .btn {
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.85rem 2rem;
+            padding: 0.8rem 2rem;
             font-weight: 600;
             border-radius: 50px;
             transition: var(--transition);
             cursor: pointer;
             border: none;
-            font-size: 1rem;
             background: var(--primary);
             color: white;
             text-decoration: none;
+            font-size: 0.95rem;
         }
-        .btn i { font-size: 1rem; }
         .btn:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
@@ -105,8 +102,11 @@
             background: var(--primary);
             color: white;
         }
+        .btn-small {
+            padding: 0.5rem 1.2rem;
+            font-size: 0.85rem;
+        }
 
-        /* Cards */
         .card {
             background: white;
             border-radius: var(--border-radius);
@@ -116,8 +116,8 @@
             height: 100%;
         }
         .card:hover {
-            transform: translateY(-6px);
-            box-shadow: var(--shadow-hover);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
         }
 
         /* Header */
@@ -125,10 +125,10 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255,255,255,0.96);
-            backdrop-filter: blur(12px);
+            background: rgba(255,255,255,0.97);
+            backdrop-filter: blur(10px);
             z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
         }
         .header-container {
             display: flex;
@@ -139,9 +139,9 @@
             margin: 0 auto;
         }
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, var(--primary), #7209b7);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
@@ -160,14 +160,14 @@
         .nav-link:hover { color: var(--primary); }
         .mobile-toggle {
             display: none;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             cursor: pointer;
         }
 
         /* Hero */
         .hero {
             padding: 10rem 0 5rem;
-            background: linear-gradient(135deg, #f5f7ff 0%, #e9ecef 100%);
+            background: linear-gradient(135deg, #f5f7ff 0%, #eef2ff 100%);
         }
         .hero-grid {
             display: grid;
@@ -185,19 +185,20 @@
             display: flex;
             gap: 2rem;
             margin-top: 2rem;
+            flex-wrap: wrap;
         }
-        .stat h3 { font-size: 2rem; color: var(--primary); margin-bottom: 0; }
+        .stat h3 { font-size: 1.8rem; color: var(--primary); margin-bottom: 0; }
         .hero-image {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, var(--primary), #7209b7);
             border-radius: 30px;
             padding: 2rem;
             text-align: center;
             color: white;
-            box-shadow: var(--shadow-hover);
+            box-shadow: var(--shadow-lg);
         }
-        .hero-image i { font-size: 4rem; margin: 1rem; }
+        .hero-image i { font-size: 3rem; margin: 0.5rem; }
 
-        /* Services Grid */
+        /* IT Services */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -209,7 +210,23 @@
             margin-bottom: 1rem;
         }
 
-        /* About / Tech Stack */
+        /* Training Programs */
+        .training-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .training-card {
+            background: linear-gradient(135deg, var(--dark-soft), #0f172a);
+            color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            transition: var(--transition);
+        }
+        .training-card h3, .training-card p { color: white; }
+        .training-card .btn { background: white; color: var(--primary); margin-top: 1rem; }
+
+        /* Tech Stack */
         .tech-badge {
             display: inline-block;
             background: #eef2ff;
@@ -217,6 +234,7 @@
             border-radius: 50px;
             font-weight: 500;
             margin: 0.25rem;
+            font-size: 0.85rem;
         }
 
         /* Projects */
@@ -254,7 +272,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
         input, textarea {
             width: 100%;
@@ -263,18 +281,27 @@
             border: none;
             margin-bottom: 1rem;
             font-family: inherit;
+            background: rgba(255,255,255,0.1);
+            color: white;
         }
+        input::placeholder, textarea::placeholder { color: #aaa; }
+
         footer {
             background: #0a0f1c;
             color: #aaa;
             padding: 3rem 0 2rem;
             text-align: center;
         }
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        .footer-links a:hover { color: var(--primary); }
 
-        /* Mobile */
         @media (max-width: 768px) {
-            h1 { font-size: 2.5rem; }
-            h2 { font-size: 2rem; }
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.8rem; }
             .hero-grid { grid-template-columns: 1fr; text-align: center; }
             .hero-buttons { justify-content: center; }
             .stats { justify-content: center; }
@@ -286,12 +313,13 @@
                 background: white;
                 flex-direction: column;
                 padding: 2rem;
+                gap: 1rem;
                 box-shadow: 0 20px 30px rgba(0,0,0,0.1);
                 transition: 0.3s;
             }
             .nav-menu.active { left: 0; }
             .mobile-toggle { display: block; }
-            .container { padding: 0 1.5rem; }
+            .container { padding: 0 1.2rem; }
             section { padding: 3rem 0; }
         }
     </style>
@@ -300,15 +328,15 @@
 
 <header>
     <div class="header-container">
-        <div class="logo">Nexify</div>
+        <div class="logo">Logikwerk</div>
         <div class="mobile-toggle" id="mobileToggle"><i class="fas fa-bars"></i></div>
         <nav class="nav-menu" id="navMenu">
             <a href="#home" class="nav-link">Home</a>
-            <a href="#services" class="nav-link">Services</a>
-            <a href="#about" class="nav-link">About</a>
+            <a href="#services" class="nav-link">IT Services</a>
+            <a href="#training" class="nav-link">Training</a>
             <a href="#projects" class="nav-link">Projects</a>
             <a href="#contact" class="nav-link">Contact</a>
-            <a href="#contact" class="btn" style="padding: 0.5rem 1.2rem;">Get Quote</a>
+            <a href="#contact" class="btn btn-small">Get Quote</a>
         </nav>
     </div>
 </header>
@@ -318,70 +346,125 @@
     <div class="container">
         <div class="hero-grid">
             <div>
-                <h1>Future-ready IT solutions for modern enterprises</h1>
-                <p>We build scalable software, AI integrations, cloud platforms, and digital experiences that drive real business growth.</p>
+                <h1>Enterprise IT Solutions & Generative AI Training</h1>
+                <p>Logikwerk delivers cutting-edge IT services and comprehensive Generative AI training to help businesses innovate and scale.</p>
                 <div class="hero-buttons">
                     <a href="#contact" class="btn"><i class="fas fa-rocket"></i> Start a project</a>
-                    <a href="#services" class="btn btn-outline">Explore services</a>
+                    <a href="#training" class="btn btn-outline"><i class="fas fa-graduation-cap"></i> Explore training</a>
                 </div>
                 <div class="stats">
-                    <div class="stat"><h3>150+</h3><p>Projects delivered</p></div>
-                    <div class="stat"><h3>98%</h3><p>Client retention</p></div>
-                    <div class="stat"><h3>45+</h3><p>Expert engineers</p></div>
+                    <div class="stat"><h3>50+</h3><p>Enterprise clients</p></div>
+                    <div class="stat"><h3>100%</h3><p>Client satisfaction</p></div>
+                    <div class="stat"><h3>24/7</h3><p>Support</p></div>
                 </div>
             </div>
             <div class="hero-image">
-                <i class="fas fa-cloud-upload-alt"></i>
-                <i class="fas fa-microchip"></i>
-                <i class="fas fa-database"></i>
-                <h3 style="margin-top: 1rem;">Innovation meets execution</h3>
-                <p style="color: #e0e0e0;">End-to-end IT partner</p>
+                <i class="fas fa-laptop-code"></i>
+                <i class="fas fa-brain"></i>
+                <i class="fas fa-chart-line"></i>
+                <h3 style="margin-top: 1rem;">AI-Powered Digital Transformation</h3>
+                <p>Innovation meets execution</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Services -->
+<!-- IT Services -->
 <section id="services">
     <div class="container">
         <div class="section-title">
-            <h2>Core IT services</h2>
-            <p>We help businesses scale with modern technology stacks and agile delivery.</p>
+            <h2>IT Services</h2>
+            <p>End-to-end technology solutions for modern enterprises.</p>
         </div>
         <div class="services-grid">
-            <div class="card"><div class="service-icon"><i class="fas fa-laptop-code"></i></div><h3>Custom software dev</h3><p>Web, mobile, desktop – tailored to your workflows.</p></div>
-            <div class="card"><div class="service-icon"><i class="fas fa-cloud"></i></div><h3>Cloud & DevOps</h3><p>AWS, Azure, GCP – CI/CD, Kubernetes, serverless.</p></div>
-            <div class="card"><div class="service-icon"><i class="fas fa-brain"></i></div><h3>AI & automation</h3><p>LLM integration, RAG, intelligent process automation.</p></div>
-            <div class="card"><div class="service-icon"><i class="fas fa-chart-line"></i></div><h3>Data analytics</h3><p>BI dashboards, data warehousing, real-time insights.</p></div>
-            <div class="card"><div class="service-icon"><i class="fas fa-shield-alt"></i></div><h3>Cybersecurity</h3><p>Risk assessment, compliance, zero-trust architecture.</p></div>
-            <div class="card"><div class="service-icon"><i class="fas fa-headset"></i></div><h3>IT consulting</h3><p>Digital transformation strategy and tech advisory.</p></div>
+            <div class="card">
+                <div class="service-icon"><i class="fas fa-brain"></i></div>
+                <h3>AI & Machine Learning</h3>
+                <p>Custom AI models, predictive analytics, NLP, computer vision, and intelligent automation.</p>
+            </div>
+            <div class="card">
+                <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Data Analytics</h3>
+                <p>Business intelligence, real-time dashboards, data warehousing, and actionable insights.</p>
+            </div>
+            <div class="card">
+                <div class="service-icon"><i class="fas fa-cloud"></i></div>
+                <h3>Cloud Engineering</h3>
+                <p>Cloud migration, DevOps, CI/CD, Kubernetes, and serverless architectures.</p>
+            </div>
+            <div class="card">
+                <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                <h3>Custom Software</h3>
+                <p>Web, mobile, and enterprise software tailored to your business needs.</p>
+            </div>
+            <div class="card">
+                <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Cybersecurity</h3>
+                <p>Risk assessment, compliance, security audits, and zero-trust architecture.</p>
+            </div>
+            <div class="card">
+                <div class="service-icon"><i class="fas fa-headset"></i></div>
+                <h3>IT Consulting</h3>
+                <p>Digital transformation strategy, technology advisory, and roadmap planning.</p>
+            </div>
         </div>
     </div>
 </section>
 
-<!-- About + tech stack -->
-<section id="about" style="background: #f8fafc;">
+<!-- Generative AI Training -->
+<section id="training" style="background: linear-gradient(135deg, #0b132b 0%, #16213e 100%);">
     <div class="container">
         <div class="section-title">
-            <h2>Who we are</h2>
-            <p>We're a team of engineers, designers, and strategists committed to delivering impact.</p>
+            <h2 style="color: white;">Generative AI Training Programs</h2>
+            <p style="color: #ccc;">Equip your teams with the skills to harness the power of Generative AI.</p>
         </div>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 2rem;">
-            <div class="card"><i class="fas fa-eye" style="font-size: 2rem; color: var(--primary);"></i><h3>Our mission</h3><p>Democratize cutting-edge IT for mid-market and enterprise clients through agile, secure, and scalable solutions.</p></div>
-            <div class="card"><i class="fas fa-chart-simple" style="font-size: 2rem; color: var(--primary);"></i><h3>Our approach</h3><p>We combine design thinking with modern engineering to produce high-quality, maintainable systems.</p></div>
-        </div>
-        <div style="margin-top: 3rem; text-align: center;">
-            <h3>Tech stack expertise</h3>
-            <div style="margin-top: 1rem;">
-                <span class="tech-badge">React / Next.js</span>
-                <span class="tech-badge">Node.js / Python</span>
-                <span class="tech-badge">AWS / Azure</span>
-                <span class="tech-badge">Kubernetes</span>
-                <span class="tech-badge">TensorFlow / PyTorch</span>
-                <span class="tech-badge">Django / FastAPI</span>
-                <span class="tech-badge">PostgreSQL / MongoDB</span>
-                <span class="tech-badge">Docker / Terraform</span>
+        <div class="training-grid">
+            <div class="training-card">
+                <i class="fas fa-comment-dots" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <h3>LLM & Prompt Engineering</h3>
+                <p>Master large language models (GPT, Claude, LLaMA) and advanced prompting techniques. 4-week program with hands-on projects.</p>
+                <a href="#contact" class="btn btn-small">Enroll now</a>
             </div>
+            <div class="training-card">
+                <i class="fas fa-image" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <h3>Image & Video Generation</h3>
+                <p>Learn Stable Diffusion, DALL·E, Midjourney, and emerging video AI tools. 3-week creative AI bootcamp.</p>
+                <a href="#contact" class="btn btn-small">Enroll now</a>
+            </div>
+            <div class="training-card">
+                <i class="fas fa-cogs" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <h3>Fine-Tuning & Deployment</h3>
+                <p>Customize open-source models and deploy them in production. 6-week advanced program for developers.</p>
+                <a href="#contact" class="btn btn-small">Enroll now</a>
+            </div>
+            <div class="training-card">
+                <i class="fas fa-chalkboard-user" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                <h3>Corporate Training</h3>
+                <p>Tailored programs for your organization. Flexible delivery - online, onsite, or hybrid.</p>
+                <a href="#contact" class="btn btn-small">Contact us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Tech Stack -->
+<section style="background: #f8fafc;">
+    <div class="container">
+        <div class="section-title">
+            <h2>Technologies We Work With</h2>
+            <p>Cutting-edge tools and frameworks powering our solutions.</p>
+        </div>
+        <div style="text-align: center;">
+            <span class="tech-badge">Python / Django</span>
+            <span class="tech-badge">React / Next.js</span>
+            <span class="tech-badge">Node.js / FastAPI</span>
+            <span class="tech-badge">TensorFlow / PyTorch</span>
+            <span class="tech-badge">AWS / Azure / GCP</span>
+            <span class="tech-badge">Kubernetes / Docker</span>
+            <span class="tech-badge">PostgreSQL / MongoDB</span>
+            <span class="tech-badge">Hugging Face / LangChain</span>
+            <span class="tech-badge">LLaMA / GPT / Claude</span>
+            <span class="tech-badge">Stable Diffusion</span>
         </div>
     </div>
 </section>
@@ -390,13 +473,31 @@
 <section id="projects">
     <div class="container">
         <div class="section-title">
-            <h2>Recent projects</h2>
-            <p>Real solutions, real results.</p>
+            <h2>Recent Projects</h2>
+            <p>Delivering measurable results for our clients.</p>
         </div>
         <div class="projects-grid">
-            <div class="project-card"><div class="project-content"><i class="fas fa-chart-line" style="font-size: 2rem; color: var(--primary);"></i><h3>Fintech analytics hub</h3><p>Real-time dashboards for a leading investment firm – 40% faster reporting.</p></div></div>
-            <div class="project-card"><div class="project-content"><i class="fas fa-robot" style="font-size: 2rem; color: var(--primary);"></i><h3>AI customer support agent</h3><p>Generative AI chatbot that reduced ticket volume by 55% for an e-commerce brand.</p></div></div>
-            <div class="project-card"><div class="project-content"><i class="fas fa-cloud-upload-alt" style="font-size: 2rem; color: var(--primary);"></i><h3>Cloud migration (healthcare)</h3><p>Migrated legacy systems to AWS, achieving 99.99% uptime and HIPAA compliance.</p></div></div>
+            <div class="project-card">
+                <div class="project-content">
+                    <i class="fas fa-chart-line" style="font-size: 2rem; color: var(--primary);"></i>
+                    <h3>Banking Analytics Platform</h3>
+                    <p>Real-time fraud detection and risk analytics for a leading bank - 40% reduction in false positives.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <i class="fas fa-robot" style="font-size: 2rem; color: var(--primary);"></i>
+                    <h3>AI Customer Support Agent</h3>
+                    <p>Generative AI chatbot that reduced ticket volume by 55% for an e-commerce company.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <i class="fas fa-cloud-upload-alt" style="font-size: 2rem; color: var(--primary);"></i>
+                    <h3>Healthcare Data Platform</h3>
+                    <p>Cloud migration and predictive analytics for a healthcare provider - HIPAA compliant.</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -405,23 +506,38 @@
 <section class="contact" id="contact">
     <div class="container">
         <div class="section-title">
-            <h2 style="color: white;">Let's talk</h2>
-            <p>Ready to build something great? Reach out to our team.</p>
+            <h2 style="color: white;">Get In Touch</h2>
+            <p>Ready to transform your business? Let's talk.</p>
         </div>
         <div class="contact-grid">
             <div class="contact-info">
-                <div class="contact-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div><h4>Email us</h4><p>hello@nexify.com</p></div></div>
-                <div class="contact-item"><div class="contact-icon"><i class="fas fa-phone-alt"></i></div><div><h4>Call us</h4><p>+91 98765 43210</p></div></div>
-                <div class="contact-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div><h4>Visit</h4><p>Hyderabad, India / Singapore</p></div></div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div><h4>Email</h4><p>info@logikwerk.in</p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div><h4>Office</h4><p>SY NO.12, Acendia Ark, White Field Rd, Kondapur, Hyderabad - 500019</p></div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                    <div><h4>Hours</h4><p>Mon-Fri: 9:30 AM - 6:30 PM IST</p></div>
+                </div>
             </div>
             <div>
                 <form id="contactForm">
                     <input type="text" placeholder="Full name" id="name" required>
                     <input type="email" placeholder="Email address" id="email" required>
                     <input type="text" placeholder="Company name">
-                    <textarea rows="4" placeholder="Tell us about your project..." id="msg"></textarea>
+                    <select style="width:100%; padding:1rem; border-radius:12px; margin-bottom:1rem; background:rgba(255,255,255,0.1); color:white; border:none;">
+                        <option value="" style="color:#333;">I'm interested in...</option>
+                        <option value="it-services" style="color:#333;">IT Services</option>
+                        <option value="training" style="color:#333;">Training Programs</option>
+                        <option value="both" style="color:#333;">Both</option>
+                    </select>
+                    <textarea rows="4" placeholder="Tell us about your project or training needs..." id="msg"></textarea>
                     <button type="submit" class="btn" style="width: 100%; justify-content: center;"><i class="fas fa-paper-plane"></i> Send message</button>
-                    <div id="formSuccess" style="margin-top: 1rem; color: #28a745; display: none;">✓ Thanks! We'll get back within 24h.</div>
+                    <div id="formSuccess" style="margin-top: 1rem; color: #28a745; display: none;">✓ Thank you! We'll get back within 24 hours.</div>
                 </form>
             </div>
         </div>
@@ -430,12 +546,19 @@
 
 <footer>
     <div class="container">
-        <div class="logo" style="margin-bottom: 1rem;">Nexify</div>
-        <p>© 2025 Nexify Technologies — IT consulting & digital engineering</p>
+        <div class="logo" style="margin-bottom: 1rem; display: inline-block;">Logikwerk</div>
+        <p>© 2025 Logikwerk Private Limited — Enterprise AI & Data Analytics Solutions</p>
+        <div class="footer-links" style="margin: 1rem 0;">
+            <a href="#home">Home</a>
+            <a href="#services">IT Services</a>
+            <a href="#training">Training</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
         <div style="margin-top: 1rem;">
             <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-github"></i></a>
             <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-twitter"></i></a>
+            <a href="#" style="color: white; margin: 0 0.5rem;"><i class="fab fa-github"></i></a>
         </div>
     </div>
 </footer>
@@ -455,14 +578,14 @@
         });
     });
 
-    // Form demo
+    // Contact form
     const form = document.getElementById('contactForm');
     const successMsg = document.getElementById('formSuccess');
     form?.addEventListener('submit', (e) => {
         e.preventDefault();
         successMsg.style.display = 'block';
         form.reset();
-        setTimeout(() => successMsg.style.display = 'none', 4000);
+        setTimeout(() => successMsg.style.display = 'none', 5000);
     });
 </script>
 </body>
